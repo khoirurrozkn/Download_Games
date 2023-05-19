@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import './Hero.css'
 
 const Hero = () => {
   const [ data, setData ] = useState([])
@@ -33,7 +34,20 @@ const Hero = () => {
     
   return(
     <>
-      <div>
+      <div id='navbar' className='container-fluid'>
+       <div id='option'>
+          <div className='childNavbar'>
+
+          </div>
+          <div className='childNavbar'>
+
+          </div>
+          <div className='childNavbar'>
+
+          </div>
+        </div>
+      </div>
+      <div id='content'>
 
       </div>
     </>      
