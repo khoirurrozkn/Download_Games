@@ -1,20 +1,139 @@
+/* /////////////////////////////////////// Navbar //////////////////////////////////// */
+
 .navbar{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684509314/5238994_rpmplu.jpg');
     background-size: cover;
     background-position: center;
-    height: 35vh;
-}.navbar .option{
+    height: 40%;
     width: 100%;
-    height: 10vh;
 }
-.navbar .option .childNavbar{
-    display: inline-block;
-    width: 33%;
+
+/* /////////////////////////////////////// Topside //////////////////////////////////// */
+
+.navbar .topSide{
+    width: 100%;
+    height: 20%;
+    margin-top: -5px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .topSide .boxTopSide{
+    width: 32%;
     height: 100%;
-    border: solid 1px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .topSide .boxTopSide .logo{
+    font-size: 180%;
+    font-family: 'Sigmar', cursive;
+    color: white;
+}
+
+.navbar .topSide .boxTopSide .wrapMe{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .topSide .boxTopSide .wrapMe i{
+    display: block;
+    font-size: 180%;
+}
+
+.navbar .topSide .boxTopSide .wrapMe .wrapGithub{
+    background-color: white; 
+    border-radius: 100%; 
+    width: 60%; 
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .topSide .boxTopSide .wrapMe .bi-instagram {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #ff935a, #ffca3a, #ffc045, #ffd94d, #ffeb59);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 8s ease-in-out infinite;
+}
+  
+@keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+  
+
+.navbar .topSide .boxTopSideSearch{
+    width: 46%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .topSide .boxTopSideSearch .colorBoxTopSideSearch{
+    background-color: #ffc8c855;
+    width: 100%;
+    height: 65%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .topSide .boxTopSideSearch .colorBoxTopSideSearch input{
+    background-color: transparent;
+    display: inline-block;
+    width: 96%;
+    color: white;
+}
+
+.navbar .topSide .boxTopSideSearch .colorBoxTopSideSearch input::placeholder{
+    color: rgba(255, 255, 255, 0.611);
+}
+
+.navbar .topSide .boxTopSideSearch .colorBoxTopSideSearch i{
+    color: rgba(255, 255, 255, 0.611);
+    font-size: 150%;
+}
+
+/* /////////////////////////////////////// Greetings //////////////////////////////////// */
+
+.navbar .greetings{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    font-family: 'Sigmar', cursive;
+    color: rgb(235, 164, 164);
+}
+
+/* /////////////////////////////////////// Middleside //////////////////////////////////// */
+
+.navbar .middleSide{
+    width: 100%;
+    height: 67%;
+    border: solid 1px blue;
 }
 
 .content{
     background-color: #2E3036;
-    height: 65vh;
+    width: 100%;
+    height: 60%;
 }

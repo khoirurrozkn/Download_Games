@@ -34,19 +34,44 @@ const Hero = () => {
     
   return(
     <>
-      <div className='navbar container-fluid'>
-       <div className='option'>
-          <div className='childNavbar'>
-
+      <div className='navbar'>
+       <div className='topSide'>
+          <div className='boxTopSide'>
+              <div className='logo'>
+                Kuki Games
+              </div>
           </div>
-          <div className='childNavbar'>
-
+          <div className='boxTopSideSearch'>
+            <div className='colorBoxTopSideSearch'>
+              <input type='text' placeholder='Masukan judul game'></input>
+              <i className="bi bi-search"></i>
+            </div>
           </div>
-          <div className='childNavbar'>
-
+          <div className='boxTopSide'>
+            <div className='wrapMe'>
+              <div className='wrapGithub'>
+                <i className="bi bi-github" style={{color: 'rgb(129,38,144)'}}></i>
+              </div>
+            </div>
+            <div className='wrapMe'>
+              <i className="bi bi-whatsapp" style={{color: 'rgb(61,193,80)'}}></i>
+            </div>
+            <div className='wrapMe'>
+              <i className="bi bi-instagram"></i>
+            </div>
+            <div className='wrapMe'>
+            <i class="bi bi-person-badge" style={{color: 'white'}}></i>
+            </div>
           </div>
-        </div>
+       </div>
+       <div className='greetings'>
+          <span>Pemrograman itu menyenangkan.</span>
+       </div>
+       <div className='middleSide'>
+
+       </div>
       </div>
+
       <div className='content'>
 
       </div>
