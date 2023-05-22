@@ -34,8 +34,8 @@ const Hero = () => {
     
   return(
     <>
-      <div id='navbar' className='container-fluid'>
-       <div id='option'>
+      <div className='navbar container-fluid'>
+       <div className='option'>
           <div className='childNavbar'>
 
           </div>
@@ -47,7 +47,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div id='content'>
+      <div className='content'>
 
       </div>
     </>      
