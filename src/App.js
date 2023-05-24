@@ -6,9 +6,10 @@ import Hero from './pages/Hero'
 function App() {
   return(
     <BrowserRouter>
-      <div id='app' className='container-fluid'>
+      <div id='app'>
         <Routes>
-          <Route path='/' element={<Hero />}></Route>
+          <Route exact path='/' element={<Hero />}></Route>
+
           <Route path='/*' element={<NotFound />}></Route>
         </Routes>
       </div>
