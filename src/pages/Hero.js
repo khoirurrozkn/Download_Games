@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Button from '../component/Button'
+import Carousel from '../component/Carousel'
 import axios from 'axios'
 import './Hero.css'
 
@@ -162,18 +164,17 @@ const Hero = () => {
 
       <div className='content'>
         <div className='choose'>
-
+          <Button field='Need help?'/>
+          <Button field='Complain'/>
+          <Button field='Req games'/>
+          <Button field='Crack'/>
         </div>
         <div class="slideShow">
-          <div class="slide">
-            <img src="https://res.cloudinary.com/dld4k3hlf/image/upload/v1684915568/tumb_gtav-min-min_ic9c9m.jpg" alt="Gambar 1"></img>
-          </div>
-          <div class="slide">
-            <img src="gambar2.jpg" alt="Gambar 2"></img>
-          </div>
-          <div class="slide">
-            <img src="gambar3.jpg" alt="Gambar 3"></img>
-          </div>
+          <Carousel 
+            image1="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684915568/tumb_gtav-min-min_ic9c9m.jpg')" position1='100% 36%'
+            image2="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684945928/tumbnail_onepiece-min-min_l0xufa.jpg')" position2='100% 20%' 
+            image3="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684947325/tumbnail_rdr_2-min_grb1hy.png')" position3='100% 20%' 
+          />
         </div>
       </div>
     </>      
