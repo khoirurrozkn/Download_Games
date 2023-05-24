@@ -161,7 +161,20 @@ const Hero = () => {
       </div>
 
       <div className='content'>
-        <div></div>
+        <div className='choose'>
+
+        </div>
+        <div class="slideShow">
+          <div class="slide">
+            <img src="https://res.cloudinary.com/dld4k3hlf/image/upload/v1684915568/tumb_gtav-min-min_ic9c9m.jpg" alt="Gambar 1"></img>
+          </div>
+          <div class="slide">
+            <img src="gambar2.jpg" alt="Gambar 2"></img>
+          </div>
+          <div class="slide">
+            <img src="gambar3.jpg" alt="Gambar 3"></img>
+          </div>
+        </div>
       </div>
     </>      
   )
