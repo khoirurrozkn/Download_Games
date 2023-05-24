@@ -5,39 +5,6 @@ import './Hero.css'
 
 const Hero = () => {
   const [ data, setData ] = useState([])
-  const [ genre, setGenre ] = useState([
-{
-    id: 1,
-    genre: 'MMORPG'
-},
-{
-    id: 2,
-    genre: 'shooter'
-},
-{
-    id: 3,
-    genre: 'fighting'
-},
-{
-    id: 4,
-    genre: 'sports'
-},
-{
-    id: 4,
-    genre: 'racing'
-},
-{
-    id: 5,
-    genre: 'battle royale'
-},
-{
-    id: 6,
-    genre: 'strategy'
-},
-{
-    id: 7,
-    genre: 'social'
-}])
 
   const phoneNumber = '6282139306484'
   const message = 'Halooo...'
@@ -73,8 +40,27 @@ const Hero = () => {
     }
   }
 
+  const category = async () => {
+    try {
+      const { data } = await axios.get('https://free-to-play-games-database.p.rapidapi.com/api/games', {
+        params: {
+          category: 'fighting'
+        },
+        headers: {
+          'X-RapidAPI-Key': 'cade637877msh20e8db6d14691ddp107d12jsn07aea961aa44',
+          'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+        }
+      });
+  
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     fetchData()
+    category()
   },[])
 
 
@@ -123,18 +109,53 @@ const Hero = () => {
           </div>
        </div>
        <div className='greetings'>
-          <span>Pemrograman itu menyenangkan.</span>
+          <span>Programming is enjoyable and fascinating.</span>
        </div>
        <div className='middleSide'>
           <div className='infoGenre'>
             <span>Explore genre</span>
           </div>
           <div className='showGenre'>
-            {genre.map((value) => {
-              return(
-                <div className='listGenre' key={value.id}>{value.genre}</div>
-              )
-            })}
+            <div className='wrapListGenre'>
+              <div id='shooter' className='listGenre'>
+                <div>Shooter</div>
+              </div>
+            </div>
+            <div className='wrapListGenre'>
+              <div id='mmorpg' className='listGenre'>
+                <div>Mmorpg</div>
+              </div>
+            </div>
+            <div className='wrapListGenre'>
+              <div id='fighting' className='listGenre'>
+                <div>Fighting</div>
+              </div>
+            </div>
+            <div className='wrapListGenre'>
+              <div id='sports' className='listGenre'>
+                <div>Sports</div>
+              </div>
+            </div>
+            <div className='wrapListGenre'>
+              <div id='racing' className='listGenre'>
+                <div>Racing</div>
+              </div>
+            </div>
+            <div className='wrapListGenre'>
+              <div id='battleroyale' className='listGenre'>
+                <div>Battle royale</div>
+              </div>
+            </div>
+            <div className='wrapListGenre'>
+              <div id='strategy' className='listGenre'>
+                <div>Strategy</div>
+              </div>
+            </div>
+            <div className='wrapListGenre'>
+              <div id='social' className='listGenre'>
+                <div>Social</div>
+              </div>
+            </div>
           </div>
        </div>
       </div>
