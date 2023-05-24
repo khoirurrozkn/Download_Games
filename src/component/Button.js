@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Button = (props) => {
 
   return (
     <div className='chooseField'>
-        <div>{props.field}</div>
+        <Link style={{color: 'white', textDecoration: 'none'}}>{props.field}</Link>
     </div>
   )
 }

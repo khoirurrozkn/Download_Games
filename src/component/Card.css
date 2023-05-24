@@ -1,0 +1,52 @@
+.wrapListGenre{
+    width: 15%;
+    height: 100%;
+    border-radius: 10px;
+    margin-right: 5px; 
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.listGenre{
+    width: 100%;
+    height: 100%; 
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.listGenre:hover{
+    transform: scale(1.1);
+}
+
+.listGenre:hover::after {
+    content: "Ready to Go?";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffffb7;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.listGenre div{
+    width: 100%;
+    height: 30%;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    background-color: #ffffff55;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.3s;
+}
+
+.listGenre:hover div{
+    height: 90%;
+}

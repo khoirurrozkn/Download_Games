@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../component/Button'
 import Carousel from '../component/Carousel'
+import Card from '../component/Card'
 import axios from 'axios'
 import './Hero.css'
 
@@ -118,46 +119,14 @@ const Hero = () => {
             <span>Explore genre</span>
           </div>
           <div className='showGenre'>
-            <div className='wrapListGenre'>
-              <div id='shooter' className='listGenre'>
-                <div>Shooter</div>
-              </div>
-            </div>
-            <div className='wrapListGenre'>
-              <div id='mmorpg' className='listGenre'>
-                <div>Mmorpg</div>
-              </div>
-            </div>
-            <div className='wrapListGenre'>
-              <div id='fighting' className='listGenre'>
-                <div>Fighting</div>
-              </div>
-            </div>
-            <div className='wrapListGenre'>
-              <div id='sports' className='listGenre'>
-                <div>Sports</div>
-              </div>
-            </div>
-            <div className='wrapListGenre'>
-              <div id='racing' className='listGenre'>
-                <div>Racing</div>
-              </div>
-            </div>
-            <div className='wrapListGenre'>
-              <div id='battleroyale' className='listGenre'>
-                <div>Battle royale</div>
-              </div>
-            </div>
-            <div className='wrapListGenre'>
-              <div id='strategy' className='listGenre'>
-                <div>Strategy</div>
-              </div>
-            </div>
-            <div className='wrapListGenre'>
-              <div id='social' className='listGenre'>
-                <div>Social</div>
-              </div>
-            </div>
+            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684906552/tumb_cod-min_fddqlh.jpg')" genre='Shooter' />
+            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684910887/tumb_mmorpg_new_new_uknnfl.webp')" genre='Mmorpg' />
+            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684907174/tum_fighting_new-min_hroxqr.jpg')" genre='Fighting' />
+            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684908064/tumb_sepak_isnrtk.webp')" genre='Sports' />
+            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909247/tumb_racing-min_jdchzb.jpg')" genre='Racing' />
+            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909495/tumb_batleroyale_jp3uru.webp')" genre='battleRoyale' />
+            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909787/tumb_strategy-min_aciv9p.png')" genre='Strategy' />
+            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684910278/tumg_social-min_zvsno2.jpg')" genre='Social' />
           </div>
        </div>
       </div>
@@ -167,7 +136,7 @@ const Hero = () => {
           <Button field='Need help?'/>
           <Button field='Complain'/>
           <Button field='Req games'/>
-          <Button field='Crack'/>
+          <Button field='Crack games'/>
         </div>
         <div class="slideShow">
           <Carousel 
