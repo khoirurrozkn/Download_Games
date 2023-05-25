@@ -8,7 +8,7 @@ import './Hero.css'
 
 const Hero = () => {
   const [ data, setData ] = useState([])
-  const [ isResponseVisible, setIsResponseVisible ] = useState(true)
+  const [ isResponseVisible, setIsResponseVisible ] = useState(false)
 
   const handleInputClick = () => {
     setIsResponseVisible(true)
