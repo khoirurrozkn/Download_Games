@@ -9,10 +9,16 @@ import './Hero.css'
 const Hero = () => {
   const [ data, setData ] = useState([])
   const [ isResponseVisible, setIsResponseVisible ] = useState(false)
+  const [ crack, setCrack ] = useState(true)
+  const [ chooseGenre, setChooseGenre ] = useState(false)
 
-  const handleInputClick = () => {
-    setIsResponseVisible(true)
-  }
+  const handleMouseEnter = () => {
+    setChooseGenre(true);
+  };
+
+  const handleMouseLeave = () => {
+    setChooseGenre(false);
+  };
 
   const phoneNumber = '6282139306484'
   const message = 'Halooo...'
@@ -168,6 +174,14 @@ const Hero = () => {
 
               <div className='boxContentGames'>
                 <i onClick={() => setIsResponseVisible(false) } className="bi bi-x-circle back"></i>
+                <div className='crack' onClick={() => setCrack(true)} style={crack === true ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>No Crack</div>
+                <div className='noCrack' onClick={() => setCrack(false)} style={crack === false ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>Crack</div>
+                <div className='genre' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Genre <i className="bi bi-filter" style={{marginTop: '5px', marginLeft: '5px'}}></i></div>
+                {chooseGenre && (
+                  <div className='fieldGenre'>
+                    <h1>asdwadawd</h1>
+                  </div>
+                )}
               </div>
 
             </div>
