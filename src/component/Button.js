@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const Button = (props) => {
 
   return (
-    <div className='chooseField'>
-        <Link style={{color: 'white', textDecoration: 'none'}}>{props.field}</Link>
+    <div onClick={props.process} className='chooseField'>
+        <div style={{color: 'white', textDecoration: 'none'}}>{props.field}</div>
     </div>
   )
 }

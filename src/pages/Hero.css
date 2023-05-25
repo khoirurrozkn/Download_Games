@@ -130,14 +130,10 @@
     height: 66%;
 }
 
-.navbar .topSide .boxTopSideSearch .colorBoxTopSideSearch input{
+.navbar .topSide .boxTopSideSearch .colorBoxTopSideSearch .input{
     background-color: transparent;
     display: inline-block;
     width: 96%;
-    color: white;
-}
-
-.navbar .topSide .boxTopSideSearch .colorBoxTopSideSearch input::placeholder{
     color: rgba(255, 255, 255, 0.611);
 }
 
@@ -235,3 +231,94 @@
     justify-content: center;
     align-items: center;
 }
+
+
+/* /////////////////////////////////////// Response //////////////////////////////////// */
+
+#response{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.533);
+    color: white;
+}
+
+#response .wrapSearch{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#response .wrapSearch .wrapQueryGames{
+    width: 80%;
+    height: 98%;
+}
+
+#response .wrapSearch .wrapQueryGames .boxSearchGames{
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 6.5%;
+}
+
+#response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames{
+    width: 56%; 
+    height: 100%; 
+    background-color: black;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames .bgInputGames{
+    width: 92%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: #ffffff26;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames .bgInputGames input{
+    background-color: transparent;
+    display: inline-block;
+    width: 90%;
+    color: rgba(255, 255, 255, 0.611);
+}
+
+#response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames .bgInputGames .search{
+    color: rgba(255, 255, 255, 0.611);
+    font-size: 150%;
+}
+
+#response .wrapSearch .wrapQueryGames .boxContentGames{
+    width: 100%;
+    height: 93.5%;
+    background-color: black;
+    border-radius: 10px;
+    position: relative;
+}
+
+#response .wrapSearch .wrapQueryGames .boxContentGames .back{
+    position: absolute;
+    font-size: 35px;
+    left: 95%;
+    bottom: 91%;
+}
+
+
+/* #response .wrapSearch .wrapQueryGames .bi{
+    color: white;
+    font-size: 30px;
+} */

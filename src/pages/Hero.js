@@ -8,6 +8,11 @@ import './Hero.css'
 
 const Hero = () => {
   const [ data, setData ] = useState([])
+  const [ isResponseVisible, setIsResponseVisible ] = useState(true)
+
+  const handleInputClick = () => {
+    setIsResponseVisible(true)
+  }
 
   const phoneNumber = '6282139306484'
   const message = 'Halooo...'
@@ -90,7 +95,7 @@ const Hero = () => {
           </div>
           <div className='boxTopSideSearch'>
             <div className='colorBoxTopSideSearch'>
-              <input type='text' placeholder='Masukan judul game'></input>
+              <div onClick={() => setIsResponseVisible(true)} className='input'>Lihat daftar game dan cari game</div>
               <i className="bi bi-search"></i>
             </div>
           </div>
@@ -136,9 +141,9 @@ const Hero = () => {
           <Button field='Need help?'/>
           <Button field='Complain'/>
           <Button field='Req games'/>
-          <Button field='Crack games'/>
+          <Button field='Crack games' tilte='Donload crack games' />
         </div>
-        <div class="slideShow">
+        <div className="slideShow">
           <Carousel 
             image1="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684915568/tumb_gtav-min-min_ic9c9m.jpg')" position1='100% 36%'
             image2="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684945928/tumbnail_onepiece-min-min_l0xufa.jpg')" position2='100% 20%' 
@@ -146,6 +151,29 @@ const Hero = () => {
           />
         </div>
       </div>
+
+      { isResponseVisible && (
+        <div id='response'>
+          <div className='wrapSearch'>
+            <div className='wrapQueryGames'>
+
+              <div className='boxSearchGames'>
+                <div className='boxInputGames'>
+                  <div className='bgInputGames'>
+                    <input type='text' placeholder='Masukan judul game'></input>
+                    <i className="bi bi-search search"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div className='boxContentGames'>
+                <i onClick={() => setIsResponseVisible(false) } className="bi bi-x-circle back"></i>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      )}
     </>      
   )
 }
