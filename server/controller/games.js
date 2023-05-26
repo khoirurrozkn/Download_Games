@@ -2,7 +2,7 @@ import asyncHandler from 'express-async-handler'
 import Game from './../model/games.js'
 import validator from 'validator'
 
-const getAllGames = asyncHandler( async( req, res ) => {
+const getAllGame = asyncHandler( async( req, res ) => {
     const games = await Game.find()
     res.status(200).json({games})
 })
@@ -23,6 +23,6 @@ const getGame = asyncHandler( async( req, res ) => {
 })
 
 export {
-    getAllGames,
+    getAllGame,
     getGame
 }

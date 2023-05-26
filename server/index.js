@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import { notFound, errorHandler } from './middleware/errorHandler.js'
 import connection from './config/database.js'
+import categoryRoute from './routes/category.js'
+import gameCategory from './routes/games.js'
 
 
 dotenv.config()
@@ -12,7 +14,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors({ origin: process.env.CLIENT_URL }))
 
-
+app.use('/api/category', categoryRoute)
+app.use('/api/game', gameCategory)
 
 
 app.use(notFound)
