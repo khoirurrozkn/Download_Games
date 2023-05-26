@@ -74,7 +74,6 @@ const Hero = () => {
 
   useEffect(() => {
     fetchData()
-    category()
   },[])
 
 
