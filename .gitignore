@@ -1,7 +1,7 @@
 .git
 
 server/.env
-
+server/node_modules
 
 
 client/.git
