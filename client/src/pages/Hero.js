@@ -122,11 +122,11 @@ const Hero = () => {
           </div>
        </div>
        <div className='greetings'>
-          <span>Programming is enjoyable and fascinating.</span>
+          <span>Pemrograman itu menyenangkan dan asik.</span>
        </div>
        <div className='middleSide'>
           <div className='infoGenre'>
-            <span>Explore genre</span>
+            <span>Eksplore kategori</span>
           </div>
           <div className='showGenre'>
             <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684906552/tumb_cod-min_fddqlh.jpg')" genre='Shooter' />
@@ -143,10 +143,10 @@ const Hero = () => {
 
       <div className='content'>
         <div className='choose'>
-          <Button field='Need help?'/>
-          <Button field='Complain'/>
-          <Button field='Req games'/>
-          <Button field='Crack games' tilte='Donload crack games' />
+          <Button field='Bantuan?'/>
+          <Button field='Komplain'/>
+          <Button field='Req game'/>
+          <Button field='Crack game' tilte='Donload crack games' />
         </div>
         <div className="slideShow">
           <Carousel 
@@ -175,7 +175,7 @@ const Hero = () => {
                 <i onClick={() => setIsResponseVisible(false) } className="bi bi-x-circle back"></i>
                 <div className='crack' onClick={() => setCrack(true)} style={crack === true ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>No Crack</div>
                 <div className='noCrack' onClick={() => setCrack(false)} style={crack === false ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>Crack</div>
-                <div className='genre' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>Genre <i className="bi bi-filter" style={{marginTop: '5px', marginLeft: '5px'}}></i></div>
+                <div className='genre' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>kategori <i className="bi bi-filter" style={{marginTop: '5px', marginLeft: '3px'}}></i></div>
                 {chooseGenre && (
                   <div className='fieldGenre'>
                     <h1>asdwadawd</h1>
