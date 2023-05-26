@@ -14,6 +14,7 @@ app.use(cors({ origin: process.env.CLIENT_URL }))
 
 
 
+
 app.use(notFound)
 app.use(errorHandler)
 
