@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-export const connection = async () => {
+const connection = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URL, {
             useNewUrlParser: true,
@@ -11,3 +11,5 @@ export const connection = async () => {
         console.log(error.message)
     }
 }
+
+export default connection

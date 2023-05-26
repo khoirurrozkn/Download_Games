@@ -1,8 +1,8 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
-import { notFound, errorHandler } from './../middleware/errorHAndler.js'
-import connection from './../config/database.js'
+import { notFound, errorHandler } from './middleware/errorHandler.js'
+import connection from './config/database.js'
 
 
 dotenv.config()
