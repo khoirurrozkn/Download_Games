@@ -5,7 +5,35 @@ const gameSchema = mongoose.Schema({
         type: Boolean,
         required: true
     },
-    gameName: {
+    developer: {
+        type: String,
+        required: true
+    },
+    publisher: {
+        type: String,
+        required: true
+    },
+    release: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    game_url: {
+        type: String,
+        required: true
+    },
+    game_name: {
+        type: String,
+        required: true
+    },
+    platfrom: {
+        type: String,
+        reqired: true
+    },
+    thumbnail: {
         type: String,
         required: true
     },

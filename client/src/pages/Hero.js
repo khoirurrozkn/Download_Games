@@ -74,6 +74,7 @@ const Hero = () => {
 
   useEffect(() => {
     fetchData()
+    category()
   },[])
 
 
@@ -178,7 +179,7 @@ const Hero = () => {
                 <div className='genre' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>kategori <i className="bi bi-filter" style={{marginTop: '5px', marginLeft: '3px'}}></i></div>
                 {chooseGenre && (
                   <div className='fieldGenre'>
-                    <h1>asdwadawd</h1>
+                    <h1></h1>
                   </div>
                 )}
               </div>
