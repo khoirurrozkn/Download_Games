@@ -10,7 +10,6 @@ client/.env
 client/node_modules
 client/build
 client/dist
-client/src/pages/Test.js
 
 client/node_modules
 client/.pnp
