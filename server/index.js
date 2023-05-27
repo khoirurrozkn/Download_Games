@@ -12,7 +12,7 @@ const app = express()
 connection()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(cors({ origin: process.env.CLIENT_URL }))
+app.use(cors())
 
 app.use('/api/category', categoryRoute)
 app.use('/api/game', gameCategory)

@@ -1,10 +1,10 @@
 import express from 'express'
-import { getGame, getAllGame } from './../controller/games.js'
+import { getGame, getAllGame} from './../controller/games.js'
 
-const route = express.Router()
+const routes = express.Router()
 
-route.get('/', getAllGame)
-route.get('/game/:name', getGame)
+routes.get('/', getAllGame)
+routes.get('/:name', getGame)
 
 
-export default route
+export default routes

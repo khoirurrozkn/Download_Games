@@ -11,13 +11,14 @@ const Hero = () => {
   const [ isResponseVisible, setIsResponseVisible ] = useState(false)
   const [ crack, setCrack ] = useState(true)
   const [ chooseGenre, setChooseGenre ] = useState(false)
+  
 
   const handleMouseEnter = () => {
-    setChooseGenre(true);
+    setChooseGenre(true)
   };
 
   const handleMouseLeave = () => {
-    setChooseGenre(false);
+    setChooseGenre(false)
   };
 
   const phoneNumber = '6282139306484'
@@ -39,59 +40,23 @@ const Hero = () => {
 //    <button onClick={scrollToRight}>Scroll ke kanan</button>
 //  </div>
 
-  const fetchData = async () => {
+  const lihatData = async () => {
     try {
-      const { data } = await axios.get('https://free-to-play-games-database.p.rapidapi.com/api/games', {
-        headers: {
-          'X-RapidAPI-Key': 'cade637877msh20e8db6d14691ddp107d12jsn07aea961aa44',
-          'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-        }
-      });
-      setData(data)
+      const {data} = await axios.get('http://127.0.0.1:5463/api/category/Shooter')
       console.log(data)
-    } catch (error) {
-      console.error(error)
+   } catch (error) {
+      console.log(error.message)
     }
   }
 
-  const category = async () => {
-    try {
-      const { data } = await axios.get('https://free-to-play-games-database.p.rapidapi.com/api/games', {
-        params: {
-          category: 'fighting'
-        },
-        headers: {
-          'X-RapidAPI-Key': 'cade637877msh20e8db6d14691ddp107d12jsn07aea961aa44',
-          'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-        }
-      });
-  
-      console.log(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   useEffect(() => {
-    fetchData()
-    category()
+    // lihatData()
+    // console.log(process.env.REACT_APP_API_KEY)
   },[])
-
-
-  // {data?
-  //   <>
-  //     {data.map((value) => {
-  //       return (
-  //         <div key={value.id}>
-  //           <p>{value.developer}</p>
-  //         </div>
-  //       )
-  //     })}
-  //   </>
-  // : null }
     
   return(
     <>
+    <button onClick={lihatData}>Lihat data</button>
       <div className='navbar'>
        <div className='topSide'>
           <div className='boxTopSide'>

@@ -2,6 +2,7 @@
 
 server/.env
 server/node_modules
+server/middleware/protect.js
 
 
 client/.git
