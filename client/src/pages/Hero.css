@@ -318,18 +318,18 @@
 
 #response .wrapSearch .wrapQueryGames .boxContentGames .back{
     position: absolute;
-    font-size: 35px;
+    font-size:  200%;
     left: 95%;
     bottom: 91%;
 }
 
 #response .wrapSearch .wrapQueryGames .boxContentGames .crack{
     position: absolute;
-    font-size: 20px;
+    font-size: 100%;
     right: 86%;
     bottom: 91%;
     width: 10%;
-    height: 7%;
+    height: 6%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -338,11 +338,11 @@
 
 #response .wrapSearch .wrapQueryGames .boxContentGames .noCrack{
     position: absolute;
-    font-size: 20px;
+    font-size: 100%;
     right: 73%;
     bottom: 91%;
     width: 10%;
-    height: 7%;
+    height: 6%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -351,13 +351,13 @@
 
 #response .wrapSearch .wrapQueryGames .boxContentGames .genre{
     position: absolute;
-    font-size: 20px;
+    font-size: 100%;
     right: 24%;
     bottom: 91%;
     color: white;
     border: solid 1px rgba(255, 255, 255, 0.611);
-    width: 14%;
-    height: 7%;
+    width: 13%;
+    height: 6%;
     display: flex;
     justify-content: center;
     align-items: center;
