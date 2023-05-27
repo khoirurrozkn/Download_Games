@@ -1,10 +1,12 @@
 import React from 'react'
 
-const GameBySearch = () => {
+const GameBySearch = ({data}) => {
   return (
-    <div className='container-search'>
-        
-    </div>
+    <>
+      {data.map((value) => {
+        <div>{value.game_name}</div>
+      })}
+    </>
   )
 }
 

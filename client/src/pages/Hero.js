@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../component/Button'
 import Carousel from '../component/Carousel'
@@ -8,23 +8,16 @@ import './Hero.css'
 
 const Hero = () => {
   const [ data, setData ] = useState([])
-  const [ category, setCategory ] = useState([])
+  // const [ category, setCategory ] = useState([])
   const [ isResponseVisible, setIsResponseVisible ] = useState(false)
   const [ isCrack, setIsCrack ] = useState(false)
   const [ chooseGenre, setChooseGenre ] = useState(false)
-  
 
   const handleMouseEnter = () => {
-    if(!isCrack){
-      AllCategory()
-    }
     setChooseGenre(true)
   };
 
   const handleMouseLeave = () => {
-    if(!isCrack){
-      AllCategory()
-    }
     setChooseGenre(false)
   };
 
@@ -47,19 +40,36 @@ const Hero = () => {
 //    <button onClick={scrollToRight}>Scroll ke kanan</button>
 //  </div>
 
-  const AllCategory = async () => {
-    try {
-      const {data} = await axios.get('http://127.0.0.1:5463/api/category')
-      setCategory(data)
-   } catch (error) {
-      console.log(error.message)
+  // const AllCategory = async () => {
+  //   try {
+  //     const {data} = await axios.get('http://127.0.0.1:5463/api/category')
+  //     setCategory(data)
+  //  } catch (error) {
+  //     console.log(error.message)
+  //   }
+  // }
+
+  const handleGame = async (category) => {
+    if(category == ""){
+      try {
+        const {data} = await axios.get('http://127.0.0.1:5463/api/game')
+
+        setData(data)
+      } catch (error) {
+        console.log(error.message)
+      }
+    }else{
+      try {
+        const {data} = await axios.get(`http://127.0.0.1:5463/api/category/${category}`)
+  
+        setData(data.games)
+      } catch (error) {
+        console.log(error.message)
+      }
     }
   }
 
-  useEffect(() => {
-    AllCategory()
-    // console.log(process.env.REACT_APP_API_KEY)
-  },[])
+  // console.log(process.env.REACT_APP_API_KEY)
     
   return(
     <>
@@ -72,7 +82,10 @@ const Hero = () => {
           </div>
           <div className='boxTopSideSearch'>
             <div className='colorBoxTopSideSearch'>
-              <div onClick={() => setIsResponseVisible(true)} className='input'>Lihat daftar game dan cari game</div>
+              <div onClick={() => {
+                setIsResponseVisible(true);
+                handleGame("");
+              }} className='input'>Lihat daftar game dan cari game</div>
               <i className="bi bi-search"></i>
             </div>
           </div>
@@ -147,27 +160,39 @@ const Hero = () => {
                 <i onClick={() => setIsResponseVisible(false) } className="bi bi-x-circle back"></i>
                 <div className='crack' onClick={() => setIsCrack(false)} style={isCrack === false ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>No Crack</div>
                 <div className='noCrack' onClick={() => setIsCrack(true)} style={isCrack === true ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>Crack</div>
+                <div className='allGames' onClick={() => handleGame("")}>Semua</div>
                 <div className='genre' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>kategori <i className="bi bi-filter" style={{marginTop: '5px', marginLeft: '3px'}}></i></div>
+                <div className='bantuan'>Bantuan?</div>
                 {chooseGenre ?
                 <>
                   {isCrack? 
                     <div className='fieldGenre' style={{bottom: "87%"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>ini crack</div>
                   :
                     <>
-                      
                       <div className='fieldGenre' style={{bottom: "22.9%"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                        {category.map((value, index) => (
-                          <div key={value._id} className={`boxCategory${index}`}>{value.category_name}</div>
-                        ))}
+                        {/* {category.map((value, index) => (
+                          <div key={value._id} className={`boxCategory${index}`} onClick={() => handleCategory(value.category_name)}>{value.category_name}</div>
+                        ))} */}
+                        <div className='boxCategory0' onClick={() => handleGame("Shooter")}>Shooter</div>
+                        <div className='boxCategory1' onClick={() => handleGame("MMORPG")}>MMORPG</div>
+                        <div className='boxCategory2' onClick={() => handleGame("Fighting")}>Fighting</div>
+                        <div className='boxCategory3' onClick={() => handleGame("MOBA")}>MOBA</div>
+                        <div className='boxCategory4' onClick={() => handleGame("Sports")}>Sports</div>
+                        <div className='boxCategory5' onClick={() => handleGame("Racing")}>Racing</div>
+                        <div className='boxCategory6' onClick={() => handleGame("Card Game")}>Card Game</div>
+                        <div className='boxCategory7' onClick={() => handleGame("Battle Royale")}>Battle Royale</div>
+                        <div className='boxCategory8' onClick={() => handleGame("Strategy")}>Strategy</div>
+                        <div className='boxCategory9' onClick={() => handleGame("Social")}>Social</div>
                       </div>
-                      
                     </>
                   }
                 </>
                 :
                 null}
+                  {data && data.map((value) => (
+                    <div key={value._id} className='text-light'>{value.game_name}</div>
+                  ))}
               </div>
-
             </div>
           </div>
         </div>
