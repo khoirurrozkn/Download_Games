@@ -144,7 +144,7 @@
 
 /* /////////////////////////////////////// Greetings //////////////////////////////////// */
 
-.greetings{
+.navbar .greetings{
     width: 100%;
     height: 20%;
     display: flex;
@@ -430,8 +430,9 @@
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
     margin-top: 15%;
-}:hover{
+}.boxCategory0:hover{
     color:white;
+    background-color: rgba(255, 255, 255, 0.19);
 }.boxCategory1{
     border: solid 0.5px white;
     width: 100%;
@@ -440,8 +441,9 @@
     padding: 5px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
-}:hover{
+}.boxCategory1:hover{
     color:white;
+    background-color: rgba(255, 255, 255, 0.19);
 }.boxCategory2{
     border: solid 0.5px white;
     width: 100%;
@@ -450,8 +452,9 @@
     padding: 5px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
-}:hover{
-    color: white;
+}.boxCategory2:hover{
+    color:white;
+    background-color: rgba(255, 255, 255, 0.19);
 }.boxCategory3{
     border: solid 0.5px white;
     width: 100%;
@@ -460,8 +463,9 @@
     padding: 5px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
-}:hover{
-    color: white;
+}.boxCategory3:hover{
+    color:white;
+    background-color: rgba(255, 255, 255, 0.19);
 }.boxCategory4{
     border: solid 0.5px white;
     width: 100%;
@@ -470,8 +474,9 @@
     padding: 5px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
-}:hover{
-    color: white;
+}.boxCategory4:hover{
+    color:white;
+    background-color: rgba(255, 255, 255, 0.19);
 }.boxCategory5{
     border: solid 0.5px white;
     width: 100%;
@@ -480,8 +485,9 @@
     padding: 5px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
-}:hover{
-    color: white;
+}.boxCategory5:hover{
+    color:white;
+    background-color: rgba(255, 255, 255, 0.19);
 }.boxCategory6{
     border: solid 0.5px white;
     width: 100%;
@@ -490,8 +496,9 @@
     padding: 5px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
-}:hover{
-    color: white;
+}.boxCategory6:hover{
+    color:white;
+    background-color: rgba(255, 255, 255, 0.19);
 }.boxCategory7{
     border: solid 0.5px white;
     width: 100%;
@@ -500,8 +507,9 @@
     padding: 5px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
-}:hover{
-    color: white;
+}.boxCategory7:hover{
+    color:white;
+    background-color: rgba(255, 255, 255, 0.19);
 }.boxCategory8{
     border: solid 0.5px white;
     width: 100%;
@@ -510,8 +518,9 @@
     padding: 5px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
-}:hover{
-    color: white;
+}.boxCategory8:hover{
+    color:white;
+    background-color: rgba(255, 255, 255, 0.19);
 }.boxCategory9{
     border: solid 0.5px white;
     width: 100%;
@@ -520,8 +529,9 @@
     padding: 5px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
-}:hover{
-    color: white;
+}.boxCategory9:hover{
+    color:white;
+    background-color: rgba(255, 255, 255, 0.19);
 }.boxCategory10{
     border: solid 0.5px white;
     width: 100%;
@@ -530,8 +540,9 @@
     padding: 5px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
-}:hover{
+}.boxCategory10:hover{
     color: white;
+    background-color: rgba(255, 255, 255, 0.19);
 }
 
 #response .wrapSearch .wrapQueryGames .boxContentGames .back:hover{
