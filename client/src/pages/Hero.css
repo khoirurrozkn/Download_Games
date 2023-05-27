@@ -411,6 +411,11 @@
     border-radius: 5px;
 }
 
+#response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory{
+    margin-top: 15%;
+    background-color: black;
+}
+
 #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .boxCategory{
     border: solid 0.5px white;
     width: 100%;
@@ -420,131 +425,80 @@
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
 }
-
-.boxCategory0{
-    border: solid 0.5px white;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.322);
-    margin-top: 15%;
-}.boxCategory0:hover{
-    color:white;
+.boxCategory0:hover{
+    color:white !important;
     background-color: rgba(255, 255, 255, 0.19);
-}.boxCategory1{
-    border: solid 0.5px white;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.322);
 }.boxCategory1:hover{
-    color:white;
+    color:white !important;
     background-color: rgba(255, 255, 255, 0.19);
-}.boxCategory2{
-    border: solid 0.5px white;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.322);
 }.boxCategory2:hover{
-    color:white;
+    color:white !important;
     background-color: rgba(255, 255, 255, 0.19);
-}.boxCategory3{
-    border: solid 0.5px white;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.322);
 }.boxCategory3:hover{
-    color:white;
+    color:white !important;
     background-color: rgba(255, 255, 255, 0.19);
-}.boxCategory4{
-    border: solid 0.5px white;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.322);
 }.boxCategory4:hover{
-    color:white;
+    color:white !important;
     background-color: rgba(255, 255, 255, 0.19);
-}.boxCategory5{
-    border: solid 0.5px white;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.322);
 }.boxCategory5:hover{
-    color:white;
+    color:white !important;
     background-color: rgba(255, 255, 255, 0.19);
-}.boxCategory6{
-    border: solid 0.5px white;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.322);
 }.boxCategory6:hover{
-    color:white;
+    color:white !important;
     background-color: rgba(255, 255, 255, 0.19);
-}.boxCategory7{
-    border: solid 0.5px white;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.322);
 }.boxCategory7:hover{
-    color:white;
+    color:white !important;
     background-color: rgba(255, 255, 255, 0.19);
-}.boxCategory8{
-    border: solid 0.5px white;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.322);
 }.boxCategory8:hover{
-    color:white;
+    color:white !important;
     background-color: rgba(255, 255, 255, 0.19);
-}.boxCategory9{
-    border: solid 0.5px white;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.322);
 }.boxCategory9:hover{
-    color:white;
+    color:white !important;
     background-color: rgba(255, 255, 255, 0.19);
-}.boxCategory10{
-    border: solid 0.5px white;
-    width: 100%;
-    height: 40px;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.322);
 }.boxCategory10:hover{
-    color: white;
+    color:white !important;
     background-color: rgba(255, 255, 255, 0.19);
 }
 
 #response .wrapSearch .wrapQueryGames .boxContentGames .back:hover{
     color: rgba(255, 0, 0, 0.626);
+}
+
+/* //////////////////////////////////////// GAMES /////////////////////////////////////////////// */
+
+.wrapAllGamesDownload{
+    width: 100%;
+    height: 100%;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.wrapAllGamesDownload .gamesFile{
+    margin-top: 12%;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wrapAllGamesDownload .gamesFile .wrapBoxGames{
+    width: 45%;
+    border: solid 1px blue;
+}
+
+.wrapAllGamesDownload .pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+  
+.wrapAllGamesDownload .pagination .page{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }

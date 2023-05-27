@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../component/Button'
 import Carousel from '../component/Carousel'
@@ -12,34 +12,48 @@ const Hero = () => {
   const [ isResponseVisible, setIsResponseVisible ] = useState(false)
   const [ isCrack, setIsCrack ] = useState(false)
   const [ chooseGenre, setChooseGenre ] = useState(false)
+  const [gamesPerPage] = useState(6);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(data.length / gamesPerPage)
+
+  let startPage, endPage
+  
+  if (totalPages <= 3) {
+    startPage = 1;
+    endPage = totalPages
+  } else {
+    if (currentPage <= 2) {
+      startPage = 1
+      endPage = 3
+    } else if (currentPage + 1 >= totalPages) {
+      startPage = totalPages - 2
+      endPage = totalPages
+    } else {
+      startPage = currentPage - 1
+      endPage = currentPage + 1
+    }
+  }
+
+  const currentGames = data.slice((currentPage - 1) * gamesPerPage, currentPage * gamesPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page)
+  }
 
   const handleMouseEnter = () => {
     setChooseGenre(true)
-  };
+  }
 
   const handleMouseLeave = () => {
     setChooseGenre(false)
-  };
+  }
 
   const phoneNumber = '6282139306484'
   const message = 'Halooo...'
   const encodedMessage = encodeURIComponent(message)
   const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`
-
-
-  // const scrollRef = useRef(null);
-
-  // const scrollToRight = () => {
-  //   if (scrollRef.current) {
-  //     scrollRef.current.scrollLeft += 100;
-  //   }
-  // };
-
-//   <div ref={scrollRef} style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
-//    {/* Isi elemen yang ingin di-scroll */}
-//    <button onClick={scrollToRight}>Scroll ke kanan</button>
-//  </div>
-
+  
   // const AllCategory = async () => {
   //   try {
   //     const {data} = await axios.get('http://127.0.0.1:5463/api/category')
@@ -52,9 +66,10 @@ const Hero = () => {
   const handleGame = async (category) => {
     if(category == ""){
       try {
-        const {data} = await axios.get('http://127.0.0.1:5463/api/game')
+        const { data } = await axios.get('http://127.0.0.1:5463/api/game')
 
         setData(data)
+        console.log(data)
       } catch (error) {
         console.log(error.message)
       }
@@ -173,25 +188,52 @@ const Hero = () => {
                         {/* {category.map((value, index) => (
                           <div key={value._id} className={`boxCategory${index}`} onClick={() => handleCategory(value.category_name)}>{value.category_name}</div>
                         ))} */}
-                        <div className='boxCategory0' onClick={() => handleGame("Shooter")}>Shooter</div>
-                        <div className='boxCategory1' onClick={() => handleGame("MMORPG")}>MMORPG</div>
-                        <div className='boxCategory2' onClick={() => handleGame("Fighting")}>Fighting</div>
-                        <div className='boxCategory3' onClick={() => handleGame("MOBA")}>MOBA</div>
-                        <div className='boxCategory4' onClick={() => handleGame("Sports")}>Sports</div>
-                        <div className='boxCategory5' onClick={() => handleGame("Racing")}>Racing</div>
-                        <div className='boxCategory6' onClick={() => handleGame("Card Game")}>Card Game</div>
-                        <div className='boxCategory7' onClick={() => handleGame("Battle Royale")}>Battle Royale</div>
-                        <div className='boxCategory8' onClick={() => handleGame("Strategy")}>Strategy</div>
-                        <div className='boxCategory9' onClick={() => handleGame("Social")}>Social</div>
+                        <div className='wrapAllBoxCategory'>
+                          <div className='boxCategory boxCategory0' onClick={() => handleGame("Shooter")}>Shooter</div>
+                          <div className='boxCategory boxCategory1' onClick={() => handleGame("MMORPG")}>MMORPG</div>
+                          <div className='boxCategory boxCategory2' onClick={() => handleGame("Fighting")}>Fighting</div>
+                          <div className='boxCategory boxCategory3' onClick={() => handleGame("MOBA")}>MOBA</div>
+                          <div className='boxCategory boxCategory4' onClick={() => handleGame("Sports")}>Sports</div>
+                          <div className='boxCategory boxCategory5' onClick={() => handleGame("Racing")}>Racing</div>
+                          <div className='boxCategory boxCategory6' onClick={() => handleGame("Card Game")}>Card Game</div>
+                          <div className='boxCategory boxCategory7' onClick={() => handleGame("Battle Royale")}>Battle Royale</div>
+                          <div className='boxCategory boxCategory8' onClick={() => handleGame("Strategy")}>Strategy</div>
+                          <div className='boxCategory boxCategory9' onClick={() => handleGame("Social")}>Social</div>
+                        </div>
                       </div>
                     </>
                   }
                 </>
                 :
                 null}
-                  {data && data.map((value) => (
-                    <div key={value._id} className='text-light'>{value.game_name}</div>
-                  ))}
+                <div className='wrapAllGamesDownload'>
+                  <div className='gamesFile'>
+                    {currentGames.map((value) => (
+                      <div className='wrapBoxGames' key={value._id}>
+                        {value.game_name}
+                      </div>
+                    ))}
+                  </div>
+                  <div className='wrapPagination'>
+                    {totalPages > 1 && (
+                      <div className="pagination">
+                        {Array.from({ length: endPage - startPage + 1 }).map((_, index) => {
+                          const page = startPage + index;
+                          return (
+                            <div
+                              key={page}
+                              onClick={() => handlePageChange(page)}
+                              className='page'
+                              style={currentPage === page ? {backgroundColor: 'green'} : {backgroundColor: 'rgba(255, 255, 255, 0.19)'}}
+                            >
+                              {page}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
