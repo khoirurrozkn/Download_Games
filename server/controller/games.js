@@ -4,7 +4,7 @@ import validator from 'validator'
 
 const getAllGame = asyncHandler( async( req, res ) => {
     const games = await Game.find()
-    res.status(200).json({games})
+    res.status(200).json(games)
 })
 
 const getGame = asyncHandler( async( req, res ) => {
@@ -19,7 +19,7 @@ const getGame = asyncHandler( async( req, res ) => {
 
     const result = Game.findOne({ game_name : trimReq })
 
-    res.status(200).json({ result })
+    res.status(200).json(result)
 })
 
 export {

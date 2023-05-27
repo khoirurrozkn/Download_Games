@@ -1,11 +1,10 @@
 import asyncHandler from 'express-async-handler'
 import Category from './../model/category.js'
-import Game from '../model/games.js'
 
 const getAllCategory = asyncHandler( async( req, res ) => {
-    const result = await Category.find().select('-games')
+    const result = await Category.find().select('-games -_id -createdAt -updatedAt')
 
-    res.status(200).json({ result })
+    res.status(200).json(result)
 })
 
 const getCategory = asyncHandler( async( req, res ) => {
@@ -14,7 +13,7 @@ const getCategory = asyncHandler( async( req, res ) => {
     const result = await Category.findOne({ category_name : name })
     .populate('games')
 
-    res.status(200).json({ result })
+    res.status(200).json(result)
 })
 
 // const isiCategory = asyncHandler(async (req, res) => {

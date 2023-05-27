@@ -8,16 +8,23 @@ import './Hero.css'
 
 const Hero = () => {
   const [ data, setData ] = useState([])
+  const [ category, setCategory ] = useState([])
   const [ isResponseVisible, setIsResponseVisible ] = useState(false)
-  const [ crack, setCrack ] = useState(true)
+  const [ isCrack, setIsCrack ] = useState(false)
   const [ chooseGenre, setChooseGenre ] = useState(false)
   
 
   const handleMouseEnter = () => {
+    if(!isCrack){
+      AllCategory()
+    }
     setChooseGenre(true)
   };
 
   const handleMouseLeave = () => {
+    if(!isCrack){
+      AllCategory()
+    }
     setChooseGenre(false)
   };
 
@@ -40,23 +47,22 @@ const Hero = () => {
 //    <button onClick={scrollToRight}>Scroll ke kanan</button>
 //  </div>
 
-  const lihatData = async () => {
+  const AllCategory = async () => {
     try {
-      const {data} = await axios.get('http://127.0.0.1:5463/api/category/Shooter')
-      console.log(data)
+      const {data} = await axios.get('http://127.0.0.1:5463/api/category')
+      setCategory(data)
    } catch (error) {
       console.log(error.message)
     }
   }
 
   useEffect(() => {
-    // lihatData()
+    AllCategory()
     // console.log(process.env.REACT_APP_API_KEY)
   },[])
     
   return(
     <>
-    <button onClick={lihatData}>Lihat data</button>
       <div className='navbar'>
        <div className='topSide'>
           <div className='boxTopSide'>
@@ -139,14 +145,27 @@ const Hero = () => {
 
               <div className='boxContentGames'>
                 <i onClick={() => setIsResponseVisible(false) } className="bi bi-x-circle back"></i>
-                <div className='crack' onClick={() => setCrack(true)} style={crack === true ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>No Crack</div>
-                <div className='noCrack' onClick={() => setCrack(false)} style={crack === false ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>Crack</div>
+                <div className='crack' onClick={() => setIsCrack(false)} style={isCrack === false ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>No Crack</div>
+                <div className='noCrack' onClick={() => setIsCrack(true)} style={isCrack === true ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>Crack</div>
                 <div className='genre' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>kategori <i className="bi bi-filter" style={{marginTop: '5px', marginLeft: '3px'}}></i></div>
-                {chooseGenre && (
-                  <div className='fieldGenre'>
-                    <h1></h1>
-                  </div>
-                )}
+                {chooseGenre ?
+                <>
+                  {isCrack? 
+                    <div className='fieldGenre' style={{bottom: "87%"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>ini crack</div>
+                  :
+                    <>
+                      
+                      <div className='fieldGenre' style={{bottom: "22.9%"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                        {category.map((value, index) => (
+                          <div key={value._id} className={`boxCategory${index}`}>{value.category_name}</div>
+                        ))}
+                      </div>
+                      
+                    </>
+                  }
+                </>
+                :
+                null}
               </div>
 
             </div>

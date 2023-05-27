@@ -328,8 +328,8 @@
     font-size: 20px;
     right: 86%;
     bottom: 91%;
-    width: 120px;
-    height: 50px;
+    width: 10%;
+    height: 7%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -341,8 +341,8 @@
     font-size: 20px;
     right: 73%;
     bottom: 91%;
-    width: 120px;
-    height: 50px;
+    width: 10%;
+    height: 7%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -356,8 +356,8 @@
     bottom: 91%;
     color: white;
     border: solid 1px rgba(255, 255, 255, 0.611);
-    width: 120px;
-    height: 50px;
+    width: 14%;
+    height: 7%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,17 +366,132 @@
 
 #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre{
     position: absolute;
-    font-size: 20px;
-    right: 24%;
-    bottom: 83%;
-    color: white;
-    border: solid 1px rgba(255, 255, 255, 0.611);
-    width: 120px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    right: 22.5%;
+    width: 17%;
+    height: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .boxCategory{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
     border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
+}
+
+.boxCategory0{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
+    margin-top: 15%;
+}:hover{
+    color:white;
+}.boxCategory1{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
+}:hover{
+    color:white;
+}.boxCategory2{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
+}:hover{
+    color: white;
+}.boxCategory3{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
+}:hover{
+    color: white;
+}.boxCategory4{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
+}:hover{
+    color: white;
+}.boxCategory5{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
+}:hover{
+    color: white;
+}.boxCategory6{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
+}:hover{
+    color: white;
+}.boxCategory7{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
+}:hover{
+    color: white;
+}.boxCategory8{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
+}:hover{
+    color: white;
+}.boxCategory9{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
+}:hover{
+    color: white;
+}.boxCategory10{
+    border: solid 0.5px white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.322);
 }
 
 #response .wrapSearch .wrapQueryGames .boxContentGames .back:hover{
