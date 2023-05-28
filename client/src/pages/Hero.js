@@ -276,7 +276,7 @@ const Hero = () => {
                 null}
                 {isLoading? 
                 <>
-                  <div className="load-3" style={{position: 'absolute', right: '47%', top: '45%'}}>
+                  <div className="load-3 loading">
                     <div className="line"></div>
                     <div className="line"></div>
                     <div className="line"></div>

@@ -611,6 +611,12 @@
     display: none;
 }
 
+.loading{
+    position: absolute; 
+    right: 50%; 
+    top: 45%;
+}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
  
 }
@@ -755,8 +761,8 @@
     #response .wrapSearch .wrapQueryGames .boxContentGames .back{
         position: absolute;
         font-size: 200%;
-        left: 90%;
-        bottom: 91%;
+        left: 89%;
+        bottom: 90.5%;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .crack{
@@ -830,11 +836,12 @@
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .boxCategory{
         border: solid 0.2px white;
-        border-radius: 10px;
+        border-radius: 5px !important;
+        font-size: 10px;
         width: 120%;
         height: 40px;
         padding: 5px;
-        margin-bottom: 2px;
+        margin-bottom: 4px;
         color: rgba(255, 255, 255, 0.322);
         background-color: black;
     }
@@ -846,5 +853,9 @@
     .wrapAllGamesDownload .gamesFile .wrapBoxGames{
         border-bottom-right-radius: 0px !important;
         border-top-right-radius: 0px !important;
+    }
+
+    .loading{
+        right: 40%;
     }
 }
