@@ -585,6 +585,18 @@
         border-radius: 10px;
         margin-bottom: -40%;
     }
+
+    #navbar{
+        display: none;
+    }
+
+    .content{
+        display: none;
+    }
+
+    .response{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -617,5 +629,17 @@
         background-size: cover;
         border-radius: 10px;
         margin-bottom: -40%;
+    }
+
+    #navbar{
+        display: none;
+    }
+
+    .content{
+        display: none;
+    }
+
+    .response{
+        display: none;
     }
 }
