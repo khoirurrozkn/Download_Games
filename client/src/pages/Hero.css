@@ -756,7 +756,7 @@
         position: absolute;
         font-size: 200%;
         left: 90%;
-        bottom: 92%;
+        bottom: 91%;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .crack{
@@ -834,7 +834,7 @@
         width: 120%;
         height: 40px;
         padding: 5px;
-        margin-bottom: 7px;
+        margin-bottom: 2px;
         color: rgba(255, 255, 255, 0.322);
         background-color: black;
     }
