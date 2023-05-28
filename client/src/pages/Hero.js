@@ -147,7 +147,7 @@ const Hero = () => {
                     <div onClick={() => {
                       setIsResponseVisible(true);
                       handleGame("");
-                    }} className='input'>Lihat daftar game dan cari game</div>
+                    }} className='input'>Lihat daftar game</div>
                     <i className="bi bi-search"></i>
                   </div>
                 </div>
