@@ -841,7 +841,7 @@
         width: 120%;
         height: 40px;
         padding: 5px;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
         color: rgba(255, 255, 255, 0.322);
         background-color: black;
     }
@@ -856,6 +856,6 @@
     }
 
     .loading{
-        right: 40%;
+        right: 38%;
     }
 }
