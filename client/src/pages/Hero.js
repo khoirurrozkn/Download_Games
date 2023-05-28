@@ -131,6 +131,9 @@ const Hero = () => {
             </div>
           </div>
        </div>
+       <div className='wrapSmart'>
+
+       </div>
        <div className='greetings'>
           <span>Pemrograman itu menyenangkan dan asik.</span>
        </div>
@@ -155,7 +158,7 @@ const Hero = () => {
                 <div>Fighting</div>
             </div>
           </div>
-          <div className='wrapListGenre'>
+          <div className='wrapListGenre delete'>
             <div onClick={() => {handleGame("Sports"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684908064/tumb_sepak_isnrtk.webp')"}} className='listGenre'>
                 <div>Sports</div>
             </div>

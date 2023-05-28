@@ -607,6 +607,10 @@
     margin-bottom: 30px;
 }
 
+.wrapSmart{
+    display: none;
+}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
  
 }
@@ -625,16 +629,8 @@
         display: none;
     }
 
-    .navbar .topSide .boxTopSide .logo{
-        font-size: 100%;
-        font-family: 'Sigmar', cursive;
-        color: white;
-        display: inline-block;
-        position: relative;
-    }
-
     .navbar .middleSide{
-        margin-top: 100px;
+        margin-top: 180px;
     }
 
     .content .slideShow{
@@ -648,14 +644,18 @@
     }
 
     .navbar .greetings{
+        display: none;
+    }
+
+    .navbar .topSide{
+        display: none;
+    }
+
+    .wrapSmart{
+        display: block;
+        border: solid 1px white;
         width: 100%;
-        height: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 100%;
-        font-family: 'Sigmar', cursive;
-        color: rgb(235, 164, 164);
+        position: absolute;
     }
 
 }
