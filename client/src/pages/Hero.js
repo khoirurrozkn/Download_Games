@@ -254,16 +254,16 @@ const Hero = () => {
                           <div key={value._id} className={`boxCategory${index}`} onClick={() => handleCategory(value.category_name)}>{value.category_name}</div>
                         ))} */}
                         <div className='wrapAllBoxCategory'>
-                          <div className='boxCategory boxCategory0' onClick={() => {handleGame("Shooter"); setCurrentPage(1);}}>Shooter</div>
-                          <div className='boxCategory boxCategory1' onClick={() => {handleGame("MMORPG"); setCurrentPage(1);}}>MMORPG</div>
-                          <div className='boxCategory boxCategory2' onClick={() => {handleGame("Fighting"); setCurrentPage(1);}}>Fighting</div>
-                          <div className='boxCategory boxCategory3' onClick={() => {handleGame("MOBA"); setCurrentPage(1);}}>MOBA</div>
-                          <div className='boxCategory boxCategory4' onClick={() => {handleGame("Sports"); setCurrentPage(1);}}>Sports</div>
-                          <div className='boxCategory boxCategory5' onClick={() => {handleGame("Racing"); setCurrentPage(1);}}>Racing</div>
-                          <div className='boxCategory boxCategory6' onClick={() => {handleGame("Card Game"); setCurrentPage(1);}}>Card Game</div>
-                          <div className='boxCategory boxCategory7' onClick={() => {handleGame("Battle Royale"); setCurrentPage(1);}}>Battle Royale</div>
-                          <div className='boxCategory boxCategory8' onClick={() => {handleGame("Strategy"); setCurrentPage(1);}}>Strategy</div>
-                          <div className='boxCategory boxCategory9' onClick={() => {handleGame("Social"); setCurrentPage(1);}}>Social</div>
+                          <div className='boxCategory boxCategory0' onClick={() => {handleGame("Shooter"); setCurrentPage(1); setChooseGenre(false);}}>Shooter</div>
+                          <div className='boxCategory boxCategory1' onClick={() => {handleGame("MMORPG"); setCurrentPage(1); setChooseGenre(false);}}>MMORPG</div>
+                          <div className='boxCategory boxCategory2' onClick={() => {handleGame("Fighting"); setCurrentPage(1); setChooseGenre(false);}}>Fighting</div>
+                          <div className='boxCategory boxCategory3' onClick={() => {handleGame("MOBA"); setCurrentPage(1); setChooseGenre(false);}}>MOBA</div>
+                          <div className='boxCategory boxCategory4' onClick={() => {handleGame("Sports"); setCurrentPage(1); setChooseGenre(false);}}>Sports</div>
+                          <div className='boxCategory boxCategory5' onClick={() => {handleGame("Racing"); setCurrentPage(1); setChooseGenre(false);}}>Racing</div>
+                          <div className='boxCategory boxCategory6' onClick={() => {handleGame("Card Game"); setCurrentPage(1); setChooseGenre(false);}}>Card Game</div>
+                          <div className='boxCategory boxCategory7' onClick={() => {handleGame("Battle Royale"); setCurrentPage(1); setChooseGenre(false);}}>Battle Royale</div>
+                          <div className='boxCategory boxCategory8' onClick={() => {handleGame("Strategy"); setCurrentPage(1); setChooseGenre(false);}}>Strategy</div>
+                          <div className='boxCategory boxCategory9' onClick={() => {handleGame("Social"); setCurrentPage(1); setChooseGenre(false);}}>Social</div>
                         </div>
                       </div>
                     </>

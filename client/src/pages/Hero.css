@@ -854,15 +854,24 @@
     .wrapAllGamesDownload{
         border-radius: 0px !important;
     }
+
+    .wrapAllGamesDownload .gamesFile{
+        overflow: scroll;
+    }
     
     .wrapAllGamesDownload .gamesFile .wrapBoxGames{
         border-bottom-right-radius: none !important;
         border-top-right-radius: none !important;
         border-bottom: none !important;
         border-right: none !important;
+        height: 100px;
     }
 
     .loading{
         right: 43%;
+    }
+
+    #response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames .bgInputGames{
+        padding: 20px;
     }
 }
