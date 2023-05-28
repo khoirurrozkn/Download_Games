@@ -9,7 +9,7 @@ import gameCategory from './routes/games.js'
 dotenv.config()
 const app = express()
 connection()
-app.use(cors({origin: 'https://kukigames.vercel.app/'}))
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
