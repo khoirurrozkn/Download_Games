@@ -559,7 +559,7 @@
         position: absolute;
         z-index: 999;
         width: 100%;
-        height: 120vh;
+        height: 100vh;
         background-color: rgb(46,48,54);
         display: flex;
         justify-content: center;
@@ -604,7 +604,7 @@
         position: absolute;
         z-index: 999;
         width: 100%;
-        height: 120vh;
+        height: 100vh;
         background-color: rgb(46,48,54);
         display: flex;
         justify-content: center;
