@@ -241,7 +241,7 @@ const Hero = () => {
                 <div className='crack' onClick={() => {setIsCrack(false); setCurrentPage(1);}} style={isCrack === false ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>No Crack</div>
                 <div className='noCrack' onClick={() => {setIsCrack(true); setCurrentPage(1);}} style={isCrack === true ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'transparent', border: 'none'}}>Crack</div>
                 <div className='allGames' onClick={() => {handleGame(""); setCurrentPage(1);}}>Semua</div>
-                <div className='genre' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>kategori <i className="bi bi-filter" style={{marginTop: '5px', marginLeft: '3px'}}></i></div>
+                <div className='genre' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>kategori <i className="bi bi-filter"></i></div>
                 <div className='bantuan'>Bantuan?</div>
                 {chooseGenre ?
                 <>
