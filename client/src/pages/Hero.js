@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../component/Button'
 import Carousel from '../component/Carousel'
-import Card from '../component/Card'
 import axios from 'axios'
 import './Hero.css'
 
@@ -99,14 +98,6 @@ const Hero = () => {
     
   return(
     <>
-    <div id='responsive'>
-      <div className='wrapResponsive'>
-        <div className='img'></div>
-        <p className='text' style={{color: 'white'}}>Tidak menyediakan game selain PC</p>
-      </div>
-    </div>
-
-
       <div className='navbar'>
        <div className='topSide'>
           <div className='boxTopSide'>
@@ -148,15 +139,48 @@ const Hero = () => {
             <span>Eksplore kategori</span>
           </div>
           <div className='showGenre'>
-            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684906552/tumb_cod-min_fddqlh.jpg')" genre='Shooter' />
-            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684910887/tumb_mmorpg_new_new_uknnfl.webp')" genre='Mmorpg' />
-            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684907174/tum_fighting_new-min_hroxqr.jpg')" genre='Fighting' />
-            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684908064/tumb_sepak_isnrtk.webp')" genre='Sports' />
-            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909247/tumb_racing-min_jdchzb.jpg')" genre='Racing' />
-            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909495/tumb_batleroyale_jp3uru.webp')" genre='battleRoyale' />
-            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909787/tumb_strategy-min_aciv9p.png')" genre='Strategy' />
-            <Card image="linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684910278/tumg_social-min_zvsno2.jpg')" genre='Social' />
+
+          <div className='wrapListGenre'>
+            <div onClick={() => {handleGame("Shooter"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684906552/tumb_cod-min_fddqlh.jpg')"}} className='listGenre'>
+                <div>Shooter</div>
+            </div>
           </div>
+          <div className='wrapListGenre'>
+            <div onClick={() => {handleGame("MMORPG"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684910887/tumb_mmorpg_new_new_uknnfl.webp')"}} className='listGenre'>
+                <div>Mmorpg</div>
+            </div>
+          </div>
+          <div className='wrapListGenre'>
+            <div onClick={() => {handleGame("Fighting"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684907174/tum_fighting_new-min_hroxqr.jpg')"}} className='listGenre'>
+                <div>Fighting</div>
+            </div>
+          </div>
+          <div className='wrapListGenre'>
+            <div onClick={() => {handleGame("Sports"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684908064/tumb_sepak_isnrtk.webp')"}} className='listGenre'>
+                <div>Sports</div>
+            </div>
+          </div>
+          <div className='wrapListGenre delete'>
+            <div onClick={() => {handleGame("Racing"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909247/tumb_racing-min_jdchzb.jpg')"}} className='listGenre'>
+                <div>Racing</div>
+            </div>
+          </div>
+          <div className='wrapListGenre delete'>
+            <div onClick={() => {handleGame("Battle Royale"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909495/tumb_batleroyale_jp3uru.webp')"}} className='listGenre'>
+                <div>Battle Royale</div>
+            </div>
+          </div>
+          <div className='wrapListGenre delete'>
+            <div onClick={() => {handleGame("Strategy"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909787/tumb_strategy-min_aciv9p.png')"}} className='listGenre'>
+                <div>Strategy</div>
+            </div>
+          </div>
+          <div className='wrapListGenre delete'>
+            <div onClick={() => {handleGame("Social"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684910278/tumg_social-min_zvsno2.jpg')"}} className='listGenre'>
+                <div>Social</div>
+            </div>
+          </div>
+        </div>
        </div>
       </div>
 

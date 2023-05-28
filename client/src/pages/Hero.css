@@ -135,6 +135,7 @@
     display: inline-block;
     width: 96%;
     color: rgba(255, 255, 255, 0.611);
+    cursor: pointer;
 }
 
 .navbar .topSide .boxTopSideSearch .colorBoxTopSideSearch i{
@@ -181,6 +182,62 @@
     display: flex;
     justify-content: center;
 }
+
+.navbar .middleSide .wrapListGenre{
+    width: 15%;
+    height: 100%;
+    border-radius: 10px;
+    margin-right: 5px; 
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.navbar .middleSide .listGenre{
+    width: 100%;
+    height: 100%; 
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.navbar .middleSide .listGenre:hover{
+    transform: scale(1.1);
+}
+
+.navbar .middleSide .listGenre:hover::after {
+    content: "Ready to Go?";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff43;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar .middleSide .listGenre div{
+    width: 100%;
+    height: 30%;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    background-color: #ffffff55;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.3s;
+}
+
+.navbar .middleSide .listGenre:hover div{
+    height: 90%;
+}
+
 
 /* /////////////////////////////////////// Content //////////////////////////////////// */
 
@@ -550,96 +607,55 @@
     margin-bottom: 30px;
 }
 
-#responsive{
-    display: none;
-}
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    #responsive{
-        position: absolute;
-        z-index: 999;
-        width: 100%;
-        height: 100vh;
-        background-color: rgb(46,48,54);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    #responsive .wrapResponsive{
-        width: 50%;
-        height: 50%;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #responsive .wrapResponsive .img{
-        width: 60%;
-        height: 40%;
-        background-image: url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1685282062/Game_analytics-pana-min_feaumk.png');
-        background-position: center;
-        background-size: cover;
-        border-radius: 10px;
-        margin-bottom: -40%;
-    }
-
-    #navbar{
-        display: none;
-    }
-
-    .content{
-        display: none;
-    }
-
-    .response{
-        display: none;
-    }
+ 
 }
 
 @media only screen and (max-width: 767px) {
-    #responsive{
-        position: absolute;
-        z-index: 999;
+    .delete{
+        display: none !important;
+    }
+
+    .navbar .middleSide .wrapListGenre{
+        width: 30%;
+        height: 70%;
+    }
+
+    .content .choose{
+        display: none;
+    }
+
+    .navbar .topSide .boxTopSide .logo{
+        font-size: 100%;
+        font-family: 'Sigmar', cursive;
+        color: white;
+        display: inline-block;
+        position: relative;
+    }
+
+    .navbar .middleSide{
+        margin-top: 100px;
+    }
+
+    .content .slideShow{
+        width: 90%;
+        height: 67%;
+        margin-top: 60px;
+    }
+
+    .wrapGithub{
+        background-color: transparent !important;
+    }
+
+    .navbar .greetings{
         width: 100%;
-        height: 100vh;
-        background-color: rgb(46,48,54);
+        height: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
+        font-size: 100%;
+        font-family: 'Sigmar', cursive;
+        color: rgb(235, 164, 164);
     }
 
-    #responsive .wrapResponsive{
-        width: 50%;
-        height: 50%;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #responsive .wrapResponsive .img{
-        width: 60%;
-        height: 40%;
-        background-image: url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1685282062/Game_analytics-pana-min_feaumk.png');
-        background-position: center;
-        background-size: cover;
-        border-radius: 10px;
-        margin-bottom: -40%;
-    }
-
-    #navbar{
-        display: none;
-    }
-
-    .content{
-        display: none;
-    }
-
-    .response{
-        display: none;
-    }
 }
