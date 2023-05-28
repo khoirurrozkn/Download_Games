@@ -132,7 +132,29 @@ const Hero = () => {
           </div>
        </div>
        <div className='wrapSmart'>
-
+              <div className='wrapTop'>
+                <div className='logoSp'>Kuki Games</div>
+                <div className='left'>
+                  <Link to='https://github.com/khoirurrozkn'><i className="bi bi-github" style={{color: 'rgb(129,38,144)'}} title='Github saya'></i></Link>
+                  <Link to={url}><i className="bi bi-whatsapp" style={{color: 'rgb(61,193,80)'}} title='Wa saya'></i></Link>
+                  <Link to='https://www.instagram.com/khoirurrozkn/'><i className="bi bi-instagram" title='Instagram saya'></i></Link>
+                  <Link><i className="bi bi-person-badge" style={{color: 'white'}} title='Tentang saya'></i></Link>
+                </div>
+              </div>
+              <div className='wrapSearch'>
+                <div className='boxTopSideSearch'>
+                  <div className='colorBoxTopSideSearch'>
+                    <div onClick={() => {
+                      setIsResponseVisible(true);
+                      handleGame("");
+                    }} className='input'>Lihat daftar game dan cari game</div>
+                    <i className="bi bi-search"></i>
+                  </div>
+                </div>
+              </div>
+              <div className='greetSP'>
+                Pemrograman itu menyenangkan dan asik.
+              </div>
        </div>
        <div className='greetings'>
           <span>Pemrograman itu menyenangkan dan asik.</span>

@@ -653,9 +653,90 @@
 
     .wrapSmart{
         display: block;
-        border: solid 1px white;
         width: 100%;
+        height: 65%;
         position: absolute;
+    }
+
+    .navbar{
+        display: block !important;
+        justify-content: none !important;
+        align-items: none !important;
+    }
+
+    .wrapTop{
+        width: 100;
+        display: flex;
+        align-items: center;
+    }
+
+    .logoSp{
+        font-size: 140%;
+        font-family: 'Sigmar', cursive;
+        color: white;
+        margin-left: 6%;
+    }
+
+    .left{
+        margin-left: auto;
+        width: 40%;
+    }
+
+    .left .bi{
+        font-size: 140%;
+        margin-right: 10%;
+    }
+
+    .wrapSearch{
+        height: 25%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .boxTopSideSearch{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+    
+    .boxTopSideSearch .colorBoxTopSideSearch{
+        background-color: #ffc8c855;
+        width: 99%;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .boxTopSideSearch .colorBoxTopSideSearch:hover{
+        width: 100%;
+        height: 120%;
+    }
+    
+    .boxTopSideSearch .colorBoxTopSideSearch .input{
+        background-color: transparent;
+        display: inline-block;
+        width: 96%;
+        color: rgba(255, 255, 255, 0.611);
+        cursor: pointer;
+    }
+    
+    .boxTopSideSearch .colorBoxTopSideSearch i{
+        color: rgba(255, 255, 255, 0.611);
+        font-size: 150%;
+    }
+
+    .greetSP{
+        text-align: center;
+        font-size: 90%;
+        font-family: 'Sigmar', cursive;
+        color: rgb(235, 164, 164);
+        margin-top: 10%;
     }
 
 }
