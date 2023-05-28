@@ -838,9 +838,13 @@
         color: rgba(255, 255, 255, 0.322);
         background-color: black;
     }
-    
-    #response .wrapSearch .wrapQueryGames .boxContentGames .back:hover{
-        color: rgba(255, 0, 0, 0.626);
-    }
 
+    .wrapAllGamesDownload{
+        border-radius: 0px !important;
+    }
+    
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames{
+        border-bottom-right-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+    }
 }
