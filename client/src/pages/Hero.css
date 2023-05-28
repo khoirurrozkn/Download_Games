@@ -739,4 +739,108 @@
         margin-top: 10%;
     }
 
+    #response .wrapSearch .wrapQueryGames{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames{
+        width: 100%;
+    }
+
+    .wrapAllGamesDownload .gamesFile{
+        margin-top: 18%;
+    }
+
+    #response .wrapSearch .wrapQueryGames .boxContentGames .back{
+        position: absolute;
+        font-size: 200%;
+        left: 90%;
+        bottom: 92%;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .crack{
+        font-size: 60%;
+        right: 81%;
+        bottom: 92%;
+        width: 15%;
+        height: 5%;
+        border-radius: 5px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .noCrack{
+        font-size: 60%;
+        right: 65%;
+        bottom: 92%;
+        width: 15%;
+        height: 5%;
+        border-radius: 5px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .allGames{
+        font-size: 60%;
+        right: 49%;
+        bottom: 92%;
+        width: 15%;
+        height: 5%;
+        border-radius: 5px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .allGames:hover{
+        color: white;
+        background-color: rgba(255, 255, 255, 0.19);
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .genre{
+        font-size: 60%;
+        right: 33%;
+        bottom: 92%;
+        width: 15%;
+        height: 5%;
+        border-radius: 5px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .genre:hover{
+        color: white;
+        background-color: rgba(255, 255, 255, 0.19);
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .bantuan{
+        font-size: 60%;
+        right: 17%;
+        bottom: 92%;
+        width: 15%;
+        height: 5%;
+        border-radius: 5px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre{
+        position: absolute;
+        right: 33%;
+        width: 17%;
+        height: auto;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory{
+        margin-top: 15%;
+        border-radius: 10px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .boxCategory{
+        border: solid 0.2px white;
+        border-radius: 10px;
+        width: 120%;
+        height: 40px;
+        padding: 5px;
+        margin-bottom: 7px;
+        color: rgba(255, 255, 255, 0.322);
+        background-color: black;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .back:hover{
+        color: rgba(255, 0, 0, 0.626);
+    }
+
 }
