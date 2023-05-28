@@ -484,8 +484,10 @@
 }
 
 .wrapAllGamesDownload .gamesFile .wrapBoxGames{
-    width: 45%;
-    border-radius: 10px;
+    width: 480px;
+    height: 170px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
     padding: 5px;
     display: flex;
     margin: 8px 8px;
@@ -513,15 +515,15 @@
 
 .wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo .game_name{
     width: 100%;
-    height: 15%;
-    font-size: 80%;
+    font-size: 60%;
     padding: 3px;
+    color: rgba(0, 128, 0, 0.862);
 }
 
 .wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo .info{
     width: 100%;
     height: 20%;
-    margin-top: 5%;
+    margin-top: -1%;
     font-size: 60%;
     padding: 3px;
 }
@@ -546,4 +548,74 @@
     margin-left:10px;
     margin-right:10px;
     margin-bottom: 30px;
+}
+
+#responsive{
+    display: none;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    #responsive{
+        position: absolute;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(46,48,54);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #responsive .wrapResponsive{
+        width: 50%;
+        height: 50%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #responsive .wrapResponsive .img{
+        width: 60%;
+        height: 40%;
+        background-image: url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1685282062/Game_analytics-pana-min_feaumk.png');
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        margin-bottom: -40%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #responsive{
+        position: absolute;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(46,48,54);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #responsive .wrapResponsive{
+        width: 50%;
+        height: 50%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #responsive .wrapResponsive .img{
+        width: 60%;
+        height: 40%;
+        background-image: url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1685282062/Game_analytics-pana-min_feaumk.png');
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        margin-bottom: -40%;
+    }
 }

@@ -99,6 +99,14 @@ const Hero = () => {
     
   return(
     <>
+    <div id='responsive'>
+      <div className='wrapResponsive'>
+        <div className='img'></div>
+        <p className='text' style={{color: 'white'}}>Tidak menyediakan game selain PC</p>
+      </div>
+    </div>
+
+
       <div className='navbar'>
        <div className='topSide'>
           <div className='boxTopSide'>
@@ -184,9 +192,9 @@ const Hero = () => {
 
               <div className='boxContentGames'>
                 <i onClick={() => setIsResponseVisible(false) } className="bi bi-x-circle back"></i>
-                <div className='crack' onClick={() => setIsCrack(false)} style={isCrack === false ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>No Crack</div>
-                <div className='noCrack' onClick={() => setIsCrack(true)} style={isCrack === true ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>Crack</div>
-                <div className='allGames' onClick={() => handleGame("")}>Semua</div>
+                <div className='crack' onClick={() => {setIsCrack(false); setCurrentPage(1);}} style={isCrack === false ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'rgba(255, 255, 255, 0.556)', border: 'solid 1px rgba(255, 255, 255, 0.556)'}}>No Crack</div>
+                <div className='noCrack' onClick={() => {setIsCrack(true); setCurrentPage(1);}} style={isCrack === true ? {backgroundColor: 'rgba(255, 255, 255, 0.19)', color: 'white', border: 'solid 1px white'} : {color: 'transparent', border: 'none'}}>Crack</div>
+                <div className='allGames' onClick={() => {handleGame(""); setCurrentPage(1);}}>Semua</div>
                 <div className='genre' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>kategori <i className="bi bi-filter" style={{marginTop: '5px', marginLeft: '3px'}}></i></div>
                 <div className='bantuan'>Bantuan?</div>
                 {chooseGenre ?
@@ -245,7 +253,7 @@ const Hero = () => {
                         }else if(isCrack === true){
                           if(value.crack === true){
                             return(
-                              <Link className='wrapBoxGames' key={value._id}>
+                              <Link to={value.game_url} className='wrapBoxGames' key={value._id}>
                                 <img src={value.thumbnail}></img>
                                 <div className='wrapInfo'>
                                   <div className='game_name'>{value.game_name}</div>
@@ -261,7 +269,7 @@ const Hero = () => {
                     <div className='wrapPagination'>
                       {totalPages > 1 && (
                         <div className="pagination">
-                        <div onClick={() => handlePageChange(currentPage - 1)}><i class="bi bi-arrow-left-square-fill arrow"></i></div>
+                        <div onClick={() => handlePageChange(currentPage - 1)}><i className="bi bi-arrow-left-square-fill arrow"></i></div>
                         <div>
                             {Array.from({ length: endPage - startPage + 1 }).map((_, index) => {
                               const page = startPage + index;
@@ -277,7 +285,7 @@ const Hero = () => {
                               )
                             })}
                           </div>
-                          <div onClick={() => handlePageChange(currentPage + 1)}><i class="bi bi-arrow-right-square-fill arrow"></i></div>
+                          <div onClick={() => handlePageChange(currentPage + 1)}><i className="bi bi-arrow-right-square-fill arrow"></i></div>
                         </div>
                       )}
                     </div>
