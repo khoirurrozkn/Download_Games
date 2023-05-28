@@ -16,6 +16,9 @@ app.use(cors())
 
 app.use('/api/category', categoryRoute)
 app.use('/api/game', gameCategory)
+app.use('/*', ( req, res) => {
+    res.status(404).send("hayo mau apa")
+})
 
 
 app.use(notFound)
