@@ -22,7 +22,23 @@ const getGame = asyncHandler( async( req, res ) => {
     res.status(200).json(result)
 })
 
+const isiGame = asyncHandler( async( req, res ) => {
+    const { crack, description, game_url, game_name, thumbnail, category } = req.body
+
+    const result = await Game.create({
+        crack,
+        description,
+        game_url,
+        game_name,
+        thumbnail,
+        category
+    })
+
+    res.status(200).json(result)
+})
+
 export {
     getAllGame,
-    getGame
+    getGame,
+    isiGame
 }

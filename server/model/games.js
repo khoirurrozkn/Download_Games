@@ -6,16 +6,13 @@ const gameSchema = mongoose.Schema({
         required: true
     },
     developer: {
-        type: String,
-        required: true
+        type: String
     },
     publisher: {
-        type: String,
-        required: true
+        type: String
     },
     release: {
-        type: String,
-        required: true
+        type: String
     },
     description: {
         type: String,
@@ -30,8 +27,7 @@ const gameSchema = mongoose.Schema({
         required: true
     },
     platfrom: {
-        type: String,
-        reqired: true
+        type: String
     },
     thumbnail: {
         type: String,

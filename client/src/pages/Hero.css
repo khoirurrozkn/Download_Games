@@ -413,17 +413,18 @@
 
 #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory{
     margin-top: 15%;
-    background-color: black;
+    border-radius: 10px;
 }
 
 #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .boxCategory{
-    border: solid 0.5px white;
+    border: solid 0.2px white;
+    border-radius: 10px;
     width: 100%;
     height: 40px;
-    border-radius: 10px;
     padding: 5px;
     margin-bottom: 8px;
     color: rgba(255, 255, 255, 0.322);
+    background-color: black;
 }
 .boxCategory0:hover{
     color:white !important;
@@ -474,7 +475,7 @@
 }
 
 .wrapAllGamesDownload .gamesFile{
-    margin-top: 12%;
+    margin-top: 7%;
     width: 100%;
     height: 70%;
     display: flex;
@@ -484,21 +485,65 @@
 
 .wrapAllGamesDownload .gamesFile .wrapBoxGames{
     width: 45%;
-    border: solid 1px blue;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    margin: 8px 8px;
+    border-bottom: solid 0.5px white;
+    border-right: solid 0.5px white;
+    color: white;
+    text-decoration: none;
+}
+
+.wrapAllGamesDownload .gamesFile .wrapBoxGames:hover{
+    border-bottom: solid 0.5px rgb(69, 230, 187);
+    border-right: solid 0.5px rgb(69, 230, 187);
+}
+
+.wrapAllGamesDownload .gamesFile .wrapBoxGames img{
+    border-radius: 10px;
+    width: 58%;
+}
+
+.wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo .game_name{
+    width: 100%;
+    height: 15%;
+    font-size: 80%;
+    padding: 3px;
+}
+
+.wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo .info{
+    width: 100%;
+    height: 20%;
+    margin-top: 5%;
+    font-size: 60%;
+    padding: 3px;
 }
 
 .wrapAllGamesDownload .pagination{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 7%;
 }
   
 .wrapAllGamesDownload .pagination .page{
     display: inline-block;
     padding: 8px 16px;
-    background-color: #dc3545;
     color: #ffffff;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
+}
+
+.arrow{
+    font-size: 240%;
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom: 30px;
 }

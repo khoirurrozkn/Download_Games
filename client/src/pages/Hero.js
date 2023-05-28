@@ -12,10 +12,11 @@ const Hero = () => {
   const [ isResponseVisible, setIsResponseVisible ] = useState(false)
   const [ isCrack, setIsCrack ] = useState(false)
   const [ chooseGenre, setChooseGenre ] = useState(false)
-  const [gamesPerPage] = useState(6);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [ gamesPerPage ] = useState(6)
+  const [ currentPage, setCurrentPage ] = useState(1)
+  const [ isLoading, setIsLoading ] = useState(true)
 
-  const totalPages = Math.ceil(data.length / gamesPerPage)
+  const totalPages = Math.ceil(data.filter(game => game.crack === isCrack).length / gamesPerPage)
 
   let startPage, endPage
   
@@ -35,9 +36,16 @@ const Hero = () => {
     }
   }
 
-  const currentGames = data.slice((currentPage - 1) * gamesPerPage, currentPage * gamesPerPage);
+  const currentGames = data.filter(game => game.crack === isCrack).slice((currentPage - 1) * gamesPerPage, currentPage * gamesPerPage)
+
 
   const handlePageChange = (page) => {
+    if(page <= 0){
+      return
+    }
+    if(page == totalPages + 1){
+      return
+    }
     setCurrentPage(page)
   }
 
@@ -64,10 +72,12 @@ const Hero = () => {
   // }
 
   const handleGame = async (category) => {
+    setIsLoading(true)
     if(category == ""){
       try {
         const { data } = await axios.get('http://127.0.0.1:5463/api/game')
 
+        setIsLoading(false)
         setData(data)
         console.log(data)
       } catch (error) {
@@ -77,6 +87,7 @@ const Hero = () => {
       try {
         const {data} = await axios.get(`http://127.0.0.1:5463/api/category/${category}`)
   
+        setIsLoading(false)
         setData(data.games)
       } catch (error) {
         console.log(error.message)
@@ -181,24 +192,24 @@ const Hero = () => {
                 {chooseGenre ?
                 <>
                   {isCrack? 
-                    <div className='fieldGenre' style={{bottom: "87%"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>ini crack</div>
+                    <div className='fieldGenre' style={{bottom: "87%"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={() => setCurrentPage(1)}>ini crack</div>
                   :
                     <>
-                      <div className='fieldGenre' style={{bottom: "22.9%"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                      <div className='fieldGenre' style={{bottom: "22.9%"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={() => setCurrentPage(1)}>
                         {/* {category.map((value, index) => (
                           <div key={value._id} className={`boxCategory${index}`} onClick={() => handleCategory(value.category_name)}>{value.category_name}</div>
                         ))} */}
                         <div className='wrapAllBoxCategory'>
-                          <div className='boxCategory boxCategory0' onClick={() => handleGame("Shooter")}>Shooter</div>
-                          <div className='boxCategory boxCategory1' onClick={() => handleGame("MMORPG")}>MMORPG</div>
-                          <div className='boxCategory boxCategory2' onClick={() => handleGame("Fighting")}>Fighting</div>
-                          <div className='boxCategory boxCategory3' onClick={() => handleGame("MOBA")}>MOBA</div>
-                          <div className='boxCategory boxCategory4' onClick={() => handleGame("Sports")}>Sports</div>
-                          <div className='boxCategory boxCategory5' onClick={() => handleGame("Racing")}>Racing</div>
-                          <div className='boxCategory boxCategory6' onClick={() => handleGame("Card Game")}>Card Game</div>
-                          <div className='boxCategory boxCategory7' onClick={() => handleGame("Battle Royale")}>Battle Royale</div>
-                          <div className='boxCategory boxCategory8' onClick={() => handleGame("Strategy")}>Strategy</div>
-                          <div className='boxCategory boxCategory9' onClick={() => handleGame("Social")}>Social</div>
+                          <div className='boxCategory boxCategory0' onClick={() => {handleGame("Shooter"); setCurrentPage(1);}}>Shooter</div>
+                          <div className='boxCategory boxCategory1' onClick={() => {handleGame("MMORPG"); setCurrentPage(1);}}>MMORPG</div>
+                          <div className='boxCategory boxCategory2' onClick={() => {handleGame("Fighting"); setCurrentPage(1);}}>Fighting</div>
+                          <div className='boxCategory boxCategory3' onClick={() => {handleGame("MOBA"); setCurrentPage(1);}}>MOBA</div>
+                          <div className='boxCategory boxCategory4' onClick={() => {handleGame("Sports"); setCurrentPage(1);}}>Sports</div>
+                          <div className='boxCategory boxCategory5' onClick={() => {handleGame("Racing"); setCurrentPage(1);}}>Racing</div>
+                          <div className='boxCategory boxCategory6' onClick={() => {handleGame("Card Game"); setCurrentPage(1);}}>Card Game</div>
+                          <div className='boxCategory boxCategory7' onClick={() => {handleGame("Battle Royale"); setCurrentPage(1);}}>Battle Royale</div>
+                          <div className='boxCategory boxCategory8' onClick={() => {handleGame("Strategy"); setCurrentPage(1);}}>Strategy</div>
+                          <div className='boxCategory boxCategory9' onClick={() => {handleGame("Social"); setCurrentPage(1);}}>Social</div>
                         </div>
                       </div>
                     </>
@@ -206,34 +217,73 @@ const Hero = () => {
                 </>
                 :
                 null}
-                <div className='wrapAllGamesDownload'>
-                  <div className='gamesFile'>
-                    {currentGames.map((value) => (
-                      <div className='wrapBoxGames' key={value._id}>
-                        {value.game_name}
-                      </div>
-                    ))}
+                {isLoading? 
+                <>
+                  <div className="load-3" style={{position: 'absolute', right: '47%', top: '45%'}}>
+                    <div className="line"></div>
+                    <div className="line"></div>
+                    <div className="line"></div>
                   </div>
-                  <div className='wrapPagination'>
-                    {totalPages > 1 && (
-                      <div className="pagination">
-                        {Array.from({ length: endPage - startPage + 1 }).map((_, index) => {
-                          const page = startPage + index;
-                          return (
-                            <div
-                              key={page}
-                              onClick={() => handlePageChange(page)}
-                              className='page'
-                              style={currentPage === page ? {backgroundColor: 'green'} : {backgroundColor: 'rgba(255, 255, 255, 0.19)'}}
-                            >
-                              {page}
-                            </div>
-                          );
-                        })}
-                      </div>
-                    )}
+                </>  
+                : 
+                <>
+                  <div className='wrapAllGamesDownload'>
+                    <div className='gamesFile'>
+                      {currentGames.map((value) => {
+                        if(isCrack === false){
+                          if(value.crack === false){
+                            return (
+                              <Link to={value.game_url} className='wrapBoxGames' key={value._id}>
+                                <img src={value.thumbnail}></img>
+                                <div className='wrapInfo'>
+                                  <div className='game_name'>{value.game_name}</div>
+                                  <div className='info'>{value.description}</div>
+                                </div>
+                              </Link>
+                            )
+                          }
+                        }else if(isCrack === true){
+                          if(value.crack === true){
+                            return(
+                              <Link className='wrapBoxGames' key={value._id}>
+                                <img src={value.thumbnail}></img>
+                                <div className='wrapInfo'>
+                                  <div className='game_name'>{value.game_name}</div>
+                                  <div className='info'>{value.description}</div>
+                                </div>
+                              </Link>
+                            )
+                          }
+                        }
+
+                      })}
+                    </div>
+                    <div className='wrapPagination'>
+                      {totalPages > 1 && (
+                        <div className="pagination">
+                        <div onClick={() => handlePageChange(currentPage - 1)}><i class="bi bi-arrow-left-square-fill arrow"></i></div>
+                        <div>
+                            {Array.from({ length: endPage - startPage + 1 }).map((_, index) => {
+                              const page = startPage + index;
+                              return (
+                                <div
+                                  key={page}
+                                  onClick={() => handlePageChange(page)}
+                                  className='page'
+                                  style={currentPage === page ? {backgroundColor: 'green'} : {backgroundColor: 'rgba(255, 255, 255, 0.19)'}}
+                                >
+                                  {page}
+                                </div>
+                              )
+                            })}
+                          </div>
+                          <div onClick={() => handlePageChange(currentPage + 1)}><i class="bi bi-arrow-right-square-fill arrow"></i></div>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                </div>
+                </>
+                }
               </div>
             </div>
           </div>
