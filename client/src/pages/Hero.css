@@ -919,7 +919,7 @@
 
     .navbar .middleSide .wrapListGenre{
         width: 30%;
-        height: 90%;
+        height: 80% !important;
     }
 
     .content .choose{
@@ -1030,7 +1030,7 @@
 
     .greetSP{
         text-align: center;
-        font-size: 70% !important;
+        font-size: 40% !important;
         font-family: 'Sigmar', cursive;
         color: rgb(235, 164, 164);
         margin-top: 10%;
