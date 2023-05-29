@@ -365,7 +365,7 @@
 
 #response .wrapSearch .wrapQueryGames .boxContentGames{
     width: 100%;
-    height: 102%;
+    height: 93.5%;
     background-color: black;
     border-radius: 10px;
     position: relative;
@@ -452,12 +452,12 @@
 #response .wrapSearch .wrapQueryGames .boxContentGames .bantuan{
     position: absolute;
     font-size: 100%;
-    right: 14%;
+    right: 13%;
     bottom: 91%;
     color: white;
     background-color: rgba(0, 128, 0, 0.641);
     border: solid 1px rgba(255, 255, 255, 0.611);
-    width: 9%;
+    width: 11%;
     height: 6%;
     display: flex;
     justify-content: center;
