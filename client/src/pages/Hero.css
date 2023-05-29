@@ -760,7 +760,7 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames{
-        width: 100%;
+        width: 95%;
     }
 
     .wrapAllGamesDownload .gamesFile{
@@ -768,7 +768,7 @@
     }
 
     #response .wrapSearch .wrapQueryGames .boxContentGames{
-        height: 108%;
+        height: 100%;
     }
 
     #response .wrapSearch .wrapQueryGames .boxContentGames .back{
