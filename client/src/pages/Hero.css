@@ -764,6 +764,10 @@
         margin-top: 18%;
     }
 
+    #response .wrapSearch .wrapQueryGames .boxContentGames{
+        height: 100% !important;
+    }
+
     #response .wrapSearch .wrapQueryGames .boxContentGames .back{
         position: absolute;
         font-size: 200%;
