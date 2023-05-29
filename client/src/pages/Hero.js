@@ -99,7 +99,7 @@ const Hero = () => {
        <div className='topSide'>
           <div className='boxTopSide'>
               <div className='logo' title='Logo'>
-                zi-games
+                Zi Games
               </div>
           </div>
           <div className='boxTopSideSearch'>
@@ -130,7 +130,7 @@ const Hero = () => {
        </div>
        <div className='wrapSmart'>
               <div className='wrapTop'>
-                <div className='logoSp'>zi-games</div>
+                <div className='logoSp'>Zi Games</div>
                 <div className='left'>
                   <Link to='https://github.com/khoirurrozkn'><i className="bi bi-github" style={{color: 'rgb(129,38,144)'}} title='Github saya'></i></Link>
                   <Link to={url}><i className="bi bi-whatsapp" style={{color: 'rgb(61,193,80)'}} title='Wa saya'></i></Link>
