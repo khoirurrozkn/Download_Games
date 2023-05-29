@@ -365,7 +365,7 @@
 
 #response .wrapSearch .wrapQueryGames .boxContentGames{
     width: 100%;
-    height: 105%;
+    height: 102%;
     background-color: black;
     border-radius: 10px;
     position: relative;
@@ -763,6 +763,10 @@
         margin-top: 18%;
     }
 
+    #response .wrapSearch .wrapQueryGames .boxContentGames{
+        height: 112%;
+    }
+
     #response .wrapSearch .wrapQueryGames .boxContentGames .back{
         position: absolute;
         font-size: 300%;
@@ -891,21 +895,6 @@
         margin-bottom: 30px;
     }
     
-
-    /* .wrapAllGamesDownload .gamesFile .wrapBoxGames{
-        width: 480px;
-        height: 170px;
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
-        padding: 5px;
-        display: flex;
-        margin: 8px 8px;
-        border-bottom: solid 0.5px white;
-        border-right: solid 0.5px white;
-        color: white;
-        text-decoration: none;
-    } */
-
     .loading{
         right: 43%;
     }
