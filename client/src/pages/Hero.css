@@ -644,9 +644,6 @@
         margin-top: 320px;
     }
 
-    .navbar .middleSide .infoGenre{
-        margin-top: 10px;
-    }
 
     .content .slideShow{
         width: 90%;
@@ -748,7 +745,7 @@
 
     .greetSP{
         text-align: center;
-        font-size: 190%;
+        font-size: 200% !important;
         font-family: 'Sigmar', cursive;
         color: rgb(235, 164, 164);
         margin-top: 5%;
@@ -847,7 +844,7 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory{
-        margin-top: 15% !important;
+        margin-top: 10% !important;
         border-radius: 10px;
     }
     
@@ -856,7 +853,7 @@
         border-radius: 10px !important;
         font-size: 20px;
         width: 120%;
-        height: 50px !important;
+        height: 40px !important;
         padding: 5px;
         margin-bottom: 2px;
         color: rgba(255, 255, 255, 0.322);
@@ -931,10 +928,6 @@
 
     .navbar .middleSide{
         margin-top: 150px;
-    }
-
-    .navbar .middleSide .infoGenre{
-        margin-top: 0px;
     }
 
     .content .slideShow{
@@ -1136,7 +1129,7 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory{
-        margin-top: 30%;
+        margin-top: 34%;
         border-radius: 10px;
     }
     
