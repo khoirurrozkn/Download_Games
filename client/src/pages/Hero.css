@@ -779,7 +779,7 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .crack{
-        font-size: 80%;
+        font-size: 100%;
         right: 81%;
         bottom: 92%;
         width: 15%;
@@ -788,7 +788,7 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .noCrack{
-        font-size: 80%;
+        font-size: 100%;
         right: 65%;
         bottom: 92%;
         width: 15%;
@@ -797,7 +797,7 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .allGames{
-        font-size: 80%;
+        font-size: 100%;
         right: 49%;
         bottom: 92%;
         width: 15%;
@@ -811,7 +811,7 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .genre{
-        font-size: 80%;
+        font-size: 100%;
         right: 31.5%;
         bottom: 92%;
         width: 16.5%;
@@ -825,7 +825,7 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .bantuan{
-        font-size: 80%;
+        font-size: 100%;
         right: 15.5%;
         bottom: 92%;
         width: 15%;
@@ -843,14 +843,14 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory{
-        margin-top: 15%;
+        margin-top: 5%;
         border-radius: 10px;
     }
     
-    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .boxCategory{
+    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory .boxCategory{
         border: solid 0.2px white;
         border-radius: 10px !important;
-        font-size: 10px;
+        font-size: 25px;
         width: 120%;
         height: 40px;
         padding: 5px;
@@ -1132,7 +1132,7 @@
         border-radius: 10px;
     }
     
-    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .boxCategory{
+    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory .boxCategory{
         border: solid 0.2px white;
         border-radius: 5px !important;
         font-size: 10px;
