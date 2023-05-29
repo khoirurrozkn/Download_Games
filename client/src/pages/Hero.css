@@ -309,6 +309,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #response .wrapSearch .wrapQueryGames{
@@ -748,6 +749,14 @@
         font-family: 'Sigmar', cursive;
         color: rgb(235, 164, 164);
         margin-top: 10%;
+    }
+
+    #response{
+        height: 92vh;
+    }
+
+    #response .wrapSearch{
+        height: 92vh;
     }
 
     #response .wrapSearch .wrapQueryGames{
