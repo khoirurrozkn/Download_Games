@@ -1053,14 +1053,14 @@
     }
 
     #response .wrapSearch .wrapQueryGames .boxContentGames{
-        height: 113%;
+        height: 103%;
     }
 
     #response .wrapSearch .wrapQueryGames .boxContentGames .back{
         position: absolute;
         font-size: 200%;
         left: 89%;
-        bottom: 90.5%;
+        bottom: 91.5%;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .crack{
@@ -1180,5 +1180,14 @@
         margin-left:10px;
         margin-right:10px;
         margin-bottom: 30px;
+    }
+
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo .game_name{
+        font-size: 100%;
+    }
+
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo .info{
+        font-size: 40%;
+        padding: 10px;
     }
 }
