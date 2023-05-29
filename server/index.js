@@ -11,7 +11,7 @@ import path from 'path'
 dotenv.config()
 const app = express()
 connection()
-app.use(cors()) // {origin: 'https://kukigames.vercel.app'}
+app.use(cors()) // {origin: 'https://zigames.vercel.app/'}
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
