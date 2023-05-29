@@ -1128,7 +1128,7 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory{
-        margin-top: 15%;
+        margin-top: 30%;
         border-radius: 10px;
     }
     
@@ -1137,7 +1137,7 @@
         border-radius: 5px !important;
         font-size: 10px;
         width: 120%;
-        height: 40px;
+        height: 25px;
         padding: 5px;
         margin-bottom: 2px;
         color: rgba(255, 255, 255, 0.322);
