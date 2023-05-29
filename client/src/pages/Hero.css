@@ -751,14 +751,6 @@
         margin-top: 10%;
     }
 
-    #response{
-        height: 92vh;
-    }
-
-    #response .wrapSearch{
-        height: 92vh;
-    }
-
     #response .wrapSearch .wrapQueryGames{
         width: 100%;
         height: 100%;
