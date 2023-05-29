@@ -829,8 +829,8 @@
         right: 15.5%;
         bottom: 92%;
         width: 15%;
-        height: 4%;
-        border-radius: 10px;
+        height: 3%;
+        border-radius: 15px;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre{
@@ -926,7 +926,7 @@
     }
 
     .navbar .middleSide{
-        margin-top: 150px;
+        margin-top: 180px;
     }
 
     .content .slideShow{
