@@ -182,22 +182,22 @@ const Hero = () => {
                 <div>Sports</div>
             </div>
           </div>
-          <div className='wrapListGenre delete'>
+          <div className='wrapListGenre delete deleteIpad'>
             <div onClick={() => {handleGame("Racing"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909247/tumb_racing-min_jdchzb.jpg')"}} className='listGenre'>
                 <div>Racing</div>
             </div>
           </div>
-          <div className='wrapListGenre delete'>
+          <div className='wrapListGenre delete deleteIpad'>
             <div onClick={() => {handleGame("Battle Royale"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909495/tumb_batleroyale_jp3uru.webp')"}} className='listGenre'>
                 <div>Battle Royale</div>
             </div>
           </div>
-          <div className='wrapListGenre delete'>
+          <div className='wrapListGenre delete deleteIpad'>
             <div onClick={() => {handleGame("Strategy"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909787/tumb_strategy-min_aciv9p.png')"}} className='listGenre'>
                 <div>Strategy</div>
             </div>
           </div>
-          <div className='wrapListGenre delete'>
+          <div className='wrapListGenre delete deleteIpad'>
             <div onClick={() => {handleGame("Social"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684910278/tumg_social-min_zvsno2.jpg')"}} className='listGenre'>
                 <div>Social</div>
             </div>

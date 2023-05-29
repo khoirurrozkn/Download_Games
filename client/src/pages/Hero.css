@@ -604,6 +604,8 @@
     border-radius: 4px;
     cursor: pointer;
     transition: 0.3s ease;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .arrow{
@@ -624,7 +626,296 @@
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
- 
+
+    .deleteIpad{
+        display: none !important;
+    }
+
+    .navbar .middleSide .wrapListGenre{
+        width: 30%;
+        height: 85%;
+    }
+
+    .content .choose{
+        display: none;
+    }
+
+    .navbar .middleSide{
+        margin-top: 250px;
+    }
+
+    .content .slideShow{
+        width: 90%;
+        height: 67%;
+        margin-top: 60px;
+    }
+
+    .wrapGithub{
+        background-color: transparent !important;
+    }
+
+    .navbar .greetings{
+        display: none;
+    }
+
+    .navbar .topSide{
+        display: none;
+    }
+
+    .wrapSmart{
+        display: block;
+        width: 100%;
+        height: 65%;
+        position: absolute;
+    }
+
+    .navbar{
+        display: block !important;
+        justify-content: none !important;
+        align-items: none !important;
+    }
+
+    .wrapTop{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .logoSp{
+        font-size: 300%;
+        font-family: 'Sigmar', cursive;
+        color: white;
+        margin-left: 6%;
+    }
+
+    .left{
+        margin-left: auto;
+        width: 35%;
+    }
+
+    .left .bi{
+        font-size: 300%;
+        margin-right: 5%;
+    }
+
+    .wrapSearch{
+        height: 20%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .boxTopSideSearch{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+    
+    .boxTopSideSearch .colorBoxTopSideSearch{
+        background-color: #ffc8c855;
+        width: 99%;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .boxTopSideSearch .colorBoxTopSideSearch:hover{
+        width: 100%;
+        height: 120%;
+    }
+    
+    .boxTopSideSearch .colorBoxTopSideSearch .input{
+        background-color: transparent;
+        display: inline-block;
+        width: 96%;
+        color: rgba(255, 255, 255, 0.611);
+        cursor: pointer;
+    }
+    
+    .boxTopSideSearch .colorBoxTopSideSearch i{
+        color: rgba(255, 255, 255, 0.611);
+        font-size: 150%;
+    }
+
+    .greetSP{
+        text-align: center;
+        font-size: 190%;
+        font-family: 'Sigmar', cursive;
+        color: rgb(235, 164, 164);
+        margin-top: 5%;
+    }
+
+    #response .wrapSearch .wrapQueryGames{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames{
+        width: 100%;
+    }
+
+    .wrapAllGamesDownload .gamesFile{
+        margin-top: 18%;
+    }
+
+    #response .wrapSearch .wrapQueryGames .boxContentGames .back{
+        position: absolute;
+        font-size: 300%;
+        left: 89%;
+        bottom: 93%;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .crack{
+        font-size: 80%;
+        right: 81%;
+        bottom: 92%;
+        width: 15%;
+        height: 4%;
+        border-radius: 10px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .noCrack{
+        font-size: 80%;
+        right: 65%;
+        bottom: 92%;
+        width: 15%;
+        height: 4%;
+        border-radius: 10px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .allGames{
+        font-size: 80%;
+        right: 49%;
+        bottom: 92%;
+        width: 15%;
+        height: 4%;
+        border-radius: 10px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .allGames:hover{
+        color: white;
+        background-color: rgba(255, 255, 255, 0.19);
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .genre{
+        font-size: 80%;
+        right: 31.5%;
+        bottom: 92%;
+        width: 16.5%;
+        height: 4%;
+        border-radius: 10px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .genre:hover{
+        color: white;
+        background-color: rgba(255, 255, 255, 0.19);
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .bantuan{
+        font-size: 80%;
+        right: 15.5%;
+        bottom: 92%;
+        width: 15%;
+        height: 4%;
+        border-radius: 10px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre{
+        position: absolute;
+        right: 33%;
+        width: 17%;
+        height: auto;
+        text-align: center;
+        bottom: 53% !important;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory{
+        margin-top: 15%;
+        border-radius: 10px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .boxCategory{
+        border: solid 0.2px white;
+        border-radius: 10px !important;
+        font-size: 10px;
+        width: 120%;
+        height: 40px;
+        padding: 5px;
+        margin-bottom: 2px;
+        color: rgba(255, 255, 255, 0.322);
+        background-color: black;
+    }
+
+    .wrapAllGamesDownload{
+        height: 100%;
+        border-radius: 0px !important;
+    }
+
+    .wrapAllGamesDownload .gamesFile{
+        overflow: scroll;
+    }
+    
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames{
+        border-bottom-right-radius: none !important;
+        border-top-right-radius: none !important;
+        border-bottom: none !important;
+        border-right: none !important;
+        width: 100%;
+        height: 190px;
+    }
+
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo .game_name{
+        font-size: 150%;
+    }
+
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo .info{
+        font-size: 100%;
+        padding: 40px;
+    }
+
+    .wrapAllGamesDownload .pagination .page{
+        font-size: 30px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    
+    .arrow{
+        font-size: 280%;
+        margin-left:10px;
+        margin-right:10px;
+        margin-bottom: 30px;
+    }
+    
+
+    /* .wrapAllGamesDownload .gamesFile .wrapBoxGames{
+        width: 480px;
+        height: 170px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 5px;
+        display: flex;
+        margin: 8px 8px;
+        border-bottom: solid 0.5px white;
+        border-right: solid 0.5px white;
+        color: white;
+        text-decoration: none;
+    } */
+
+    .loading{
+        right: 43%;
+    }
+
+    #response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames .bgInputGames{
+        padding: 20px;
+        height: 70%;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -764,10 +1055,6 @@
         margin-top: 18%;
     }
 
-    #response .wrapSearch .wrapQueryGames .boxContentGames{
-        height: 110% !important;
-    }
-
     #response .wrapSearch .wrapQueryGames .boxContentGames .back{
         position: absolute;
         font-size: 200%;
@@ -879,5 +1166,18 @@
 
     #response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames .bgInputGames{
         padding: 20px;
+    }
+
+    .wrapAllGamesDownload .pagination .page{
+        font-size: 20px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    
+    .arrow{
+        font-size: 250%;
+        margin-left:10px;
+        margin-right:10px;
+        margin-bottom: 30px;
     }
 }
