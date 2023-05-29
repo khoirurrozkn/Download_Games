@@ -587,7 +587,7 @@
     width: 100%;
     height: 20%;
     margin-top: -1%;
-    font-size: 60%;
+    font-size: 45%;
     padding: 3px;
 }
 
@@ -1050,6 +1050,10 @@
 
     .wrapAllGamesDownload .gamesFile{
         margin-top: 18%;
+    }
+
+    #response .wrapSearch .wrapQueryGames .boxContentGames{
+        height: 103%;
     }
 
     #response .wrapSearch .wrapQueryGames .boxContentGames .back{
