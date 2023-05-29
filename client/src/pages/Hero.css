@@ -1129,7 +1129,7 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory{
-        margin-top: 40%;
+        margin-top: 40% !important;
         border-radius: 10px;
     }
     
