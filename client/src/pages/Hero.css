@@ -745,7 +745,7 @@
 
     .greetSP{
         text-align: center;
-        font-size: 200% !important;
+        font-size: 120%;
         font-family: 'Sigmar', cursive;
         color: rgb(235, 164, 164);
         margin-top: 5%;
@@ -840,20 +840,20 @@
         width: 17%;
         height: auto;
         text-align: center;
-        bottom: 53% !important;
+        bottom: 53%;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory{
-        margin-top: 10% !important;
+        margin-top: 10%;
         border-radius: 10px;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory .boxCategory{
         border: solid 0.2px white;
-        border-radius: 10px !important;
+        border-radius: 10px;
         font-size: 20px;
         width: 120%;
-        height: 40px !important;
+        height: 40px;
         padding: 5px;
         margin-bottom: 2px;
         color: rgba(255, 255, 255, 0.322);
@@ -862,7 +862,7 @@
 
     .wrapAllGamesDownload{
         height: 100%;
-        border-radius: 0px !important;
+        border-radius: 0px;
     }
 
     .wrapAllGamesDownload .gamesFile{
