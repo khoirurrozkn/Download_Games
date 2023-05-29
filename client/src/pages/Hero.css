@@ -625,7 +625,7 @@
     top: 45%;
 }
 
-@media (max-device-width: 1024px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
     .deleteIpad{
         display: none !important;
@@ -748,6 +748,10 @@
         font-family: 'Sigmar', cursive;
         color: rgb(235, 164, 164);
         margin-top: 5%;
+    }
+    
+    #response{
+        background-color: black;
     }
 
     #response .wrapSearch .wrapQueryGames{
@@ -907,7 +911,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     .delete{
         display: none !important;
     }
@@ -1029,6 +1033,10 @@
         font-family: 'Sigmar', cursive;
         color: rgb(235, 164, 164);
         margin-top: 10%;
+    }
+
+    #response{
+        background-color: black;
     }
 
     #response .wrapSearch .wrapQueryGames{
