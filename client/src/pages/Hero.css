@@ -644,6 +644,10 @@
         margin-top: 320px;
     }
 
+    .navbar .middleSide .infoGenre{
+        margin-top: 10px;
+    }
+
     .content .slideShow{
         width: 90%;
         height: 67%;
@@ -682,7 +686,7 @@
     }
 
     .logoSp{
-        font-size: 300%;
+        font-size: 320%;
         font-family: 'Sigmar', cursive;
         color: white;
         margin-left: 6%;
@@ -927,6 +931,10 @@
 
     .navbar .middleSide{
         margin-top: 150px;
+    }
+
+    .navbar .middleSide .infoGenre{
+        margin-top: 0px;
     }
 
     .content .slideShow{
