@@ -1030,7 +1030,7 @@
 
     .greetSP{
         text-align: center;
-        font-size: 90%;
+        font-size: 70% !important;
         font-family: 'Sigmar', cursive;
         color: rgb(235, 164, 164);
         margin-top: 10%;
@@ -1129,7 +1129,7 @@
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory{
-        margin-top: 34%;
+        margin-top: 40%;
         border-radius: 10px;
     }
     
