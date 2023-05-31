@@ -696,7 +696,7 @@
 
      #response .wrapSearch .wrapQueryGames{ /* controll ukuran searching tablet */
         width: 100%;
-        height: 100%; 
+        height: 110%; 
     }
     
     #response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames{
@@ -710,17 +710,9 @@
     }
 
     .wrapAllGamesDownload .gamesFile .wrapBoxGames{
-        width: 430px;
-        height: 120px;
-        border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
-        padding: 5px;
-        display: flex;
+        width: 80%;
+        height: 140px;
         margin: 5px 0px;
-        border-bottom: solid 0.5px white;
-        border-right: solid 0.5px white;
-        color: white;
-        text-decoration: none;
     }
     
     .wrapAllGamesDownload .gamesFile .wrapBoxGames:hover{
@@ -774,6 +766,7 @@
     #response .wrapSearch .wrapQueryGames .boxContentGames .crack{
         position: absolute;
         right: 80%;
+        bottom: 93%;
         width: 13%;
         height: 5%;
     }
@@ -781,18 +774,21 @@
     #response .wrapSearch .wrapQueryGames .boxContentGames .noCrack{
         right: 65.5%;
         width: 13%;
+        bottom: 93%;
         height: 5%;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .allGames{
         right: 39%;
         width: 13%;
+        bottom: 93%;
         height: 5%;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .genre{
         right: 25%;
         width: 13%;
+        bottom: 93%;
         height: 5%;
     }
     
@@ -804,13 +800,19 @@
     #response .wrapSearch .wrapQueryGames .boxContentGames .bantuan{
         right: 11%;
         width: 13%;
+        bottom: 93%;
         height: 5%;
     }
 
     #response .wrapSearch .wrapQueryGames .boxContentGames .back{
         font-size: 270%;
         left: 92%;
-        bottom: 90.5%;
+        bottom: 93%;
+    }
+
+    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre{
+        right: 23%;
+        top: 6%;
     }
 }
 
