@@ -710,9 +710,9 @@
     }
 
     .wrapAllGamesDownload .gamesFile .wrapBoxGames{
-        width: 80%;
-        height: 160px;
-        margin: 5px 0px;
+        width: 65%;
+        height: 12.5%;
+        margin: 0.5px 0px;
     }
     
     .wrapAllGamesDownload .gamesFile .wrapBoxGames:hover{
@@ -768,28 +768,28 @@
         right: 80%;
         bottom: 93%;
         width: 13%;
-        height: 5%;
+        height: 4%;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .noCrack{
         right: 65.5%;
         width: 13%;
         bottom: 93%;
-        height: 5%;
+        height: 4%;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .allGames{
         right: 39%;
         width: 13%;
         bottom: 93%;
-        height: 5%;
+        height: 4%;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .genre{
         right: 25%;
         width: 13%;
         bottom: 93%;
-        height: 5%;
+        height: 4%;
     }
     
     #response .wrapSearch .wrapQueryGames .boxContentGames .genre .bi{
@@ -801,7 +801,7 @@
         right: 11%;
         width: 13%;
         bottom: 93%;
-        height: 5%;
+        height: 4%;
     }
 
     #response .wrapSearch .wrapQueryGames .boxContentGames .back{
@@ -817,6 +817,11 @@
 
     #response .wrapSearch{  /* tampilan searching */
         height: 107%;
+    }
+
+    #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory .boxCategory{
+        width: 120%;
+        height: 28px;
     }
 }
 
