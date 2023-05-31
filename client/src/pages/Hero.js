@@ -182,7 +182,7 @@ const Hero = () => {
                 <div>Sports</div>
             </div>
           </div>
-          <div className='wrapListGenre delete deleteIpad'>
+          <div className='wrapListGenre delete'>
             <div onClick={() => {handleGame("Racing"); setCurrentPage(1); setIsResponseVisible(true)}} style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/dld4k3hlf/image/upload/v1684909247/tumb_racing-min_jdchzb.jpg')"}} className='listGenre'>
                 <div>Racing</div>
             </div>

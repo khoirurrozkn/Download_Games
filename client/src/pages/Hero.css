@@ -626,7 +626,73 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px){
+    .wrapGithub{
+        background-color: transparent !important;
+    }
 
+    .deleteIpad{
+        display: none !important;
+    }
+
+    .navbar .middleSide .wrapListGenre{
+        width: 30%;
+        height: 75%;
+        border-radius: 10px;
+        margin-right: 5px; 
+        margin-left: 5px;
+    }
+
+    .navbar .greetings{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 190%;
+        font-family: 'Sigmar', cursive;
+        color: rgb(235, 164, 164);
+    }
+
+    .content .choose{
+        display: none;
+    }
+
+    .navbar .topSide .boxTopSideSearch .colorBoxTopSideSearch{
+        width: 100%;
+        height: 55%;
+        border-radius: 10px;
+    }
+
+    .navbar .topSide .boxTopSideSearch{
+        width: 50%;
+    }
+
+    .navbar .topSide .boxTopSide{
+        width: 25%;
+    }
+    
+    .navbar .topSide .boxTopSide .wrapMe i{
+        font-size: 200%;
+    
+    }
+    
+    .navbar .topSide .boxTopSide .wrapMe i:hover{
+        font-size: 220%;
+    }
+    
+    .navbar .topSide .boxTopSide .wrapMe .wrapGithub{
+        background-color: white; 
+        border-radius: 100%; 
+        width: 60%; 
+        height: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .topSide .boxTopSide .wrapMe{
+        width: 20%;
+    }
 }
 
 @media (max-width: 768px) {
