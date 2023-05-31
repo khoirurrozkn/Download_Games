@@ -693,6 +693,125 @@
     .navbar .topSide .boxTopSide .wrapMe{
         width: 20%;
     }
+
+     #response .wrapSearch .wrapQueryGames{ /* controll ukuran searching tablet */
+        width: 100%;
+        height: 100%; 
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames{
+        width: 100%; 
+        border-top-left-radius: 0px; 
+        border-top-right-radius: 0px;
+    }
+
+    #response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames .bgInputGames{
+        border-radius: 10px;
+    }
+
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames{
+        width: 430px;
+        height: 120px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 5px;
+        display: flex;
+        margin: 5px 0px;
+        border-bottom: solid 0.5px white;
+        border-right: solid 0.5px white;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames:hover{
+        border-bottom: solid 0.5px rgb(69, 230, 187);
+        border-right: solid 0.5px rgb(69, 230, 187);
+    }
+    
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames img{
+        border-radius: 10px;
+        width: 58%;
+    }
+    
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo .game_name{
+        width: 100%;
+        font-size: 75%;
+        padding: 3px;
+        color: rgba(0, 128, 0, 0.862);
+    }
+    
+    .wrapAllGamesDownload .gamesFile .wrapBoxGames .wrapInfo .info{
+        width: 100%;
+        height: 20%;
+        margin-top: -1%;
+        font-size: 65%;
+        padding: 3px;
+    }
+      
+    .wrapAllGamesDownload .pagination .page{
+        font-size: 200% !important;
+    }
+    
+    .arrow{
+        font-size: 270%;
+        margin-bottom: 0px;
+    }
+
+    .wrapAllGamesDownload .pagination{
+        margin-top: 8%;
+    }
+
+    .wrapAllGamesDownload .gamesFile{
+        margin-top: 15%;
+    }
+
+    #response .wrapSearch .wrapQueryGames .boxContentGames .crack{
+        position: absolute;
+        right: 80%;
+        width: 13%;
+        height: 5%;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .noCrack{
+        right: 65.5%;
+        width: 13%;
+        height: 5%;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .allGames{
+        right: 39%;
+        width: 13%;
+        height: 5%;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .genre{
+        right: 25%;
+        width: 13%;
+        height: 5%;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .genre .bi{
+        margin-top: 5px; 
+        margin-left: 3px;
+    }
+    
+    #response .wrapSearch .wrapQueryGames .boxContentGames .bantuan{
+        right: 11%;
+        width: 13%;
+        height: 5%;
+    }
+
+    #response .wrapSearch .wrapQueryGames .boxContentGames .back{
+        font-size: 270%;
+        left: 92%;
+        bottom: 90.5%;
+    }
 }
 
 @media (max-width: 768px) {
