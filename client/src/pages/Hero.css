@@ -626,6 +626,7 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px){
+
     .wrapGithub{
         background-color: transparent !important;
     }
@@ -712,7 +713,7 @@
     .wrapAllGamesDownload .gamesFile .wrapBoxGames{
         width: 65%;
         height: 12.5%;
-        margin: 0.5px 0px;
+        margin: 0px 0px !important;
     }
     
     .wrapAllGamesDownload .gamesFile .wrapBoxGames:hover{
@@ -816,7 +817,7 @@
     }
 
     #response .wrapSearch{  /* tampilan searching */
-        height: 107%;
+        height: 107.5%;
     }
 
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory .boxCategory{
