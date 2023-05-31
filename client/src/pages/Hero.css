@@ -920,7 +920,7 @@
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre .wrapAllBoxCategory .boxCategory{
         border: solid 0.2px white;
         border-radius: 5px !important;
-        font-size: 10px;
+        font-size: 6px;
         width: 120%;
         height: 25px;
         padding: 5px;
