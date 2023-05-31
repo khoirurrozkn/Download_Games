@@ -694,9 +694,9 @@
         width: 20%;
     }
 
-     #response .wrapSearch .wrapQueryGames{ /* controll ukuran searching tablet */
+    #response .wrapSearch .wrapQueryGames{
         width: 100%;
-        height: 110%; 
+        height: 100%; 
     }
     
     #response .wrapSearch .wrapQueryGames .boxSearchGames .boxInputGames{
@@ -813,6 +813,10 @@
     #response .wrapSearch .wrapQueryGames .boxContentGames .fieldGenre{
         right: 23%;
         top: 6%;
+    }
+
+    #response .wrapSearch{
+        height: 113%;
     }
 }
 
