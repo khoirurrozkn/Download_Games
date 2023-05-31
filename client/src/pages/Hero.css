@@ -711,7 +711,7 @@
 
     .wrapAllGamesDownload .gamesFile .wrapBoxGames{
         width: 80%;
-        height: 140px;
+        height: 160px;
         margin: 5px 0px;
     }
     
@@ -760,7 +760,7 @@
     }
 
     .wrapAllGamesDownload .gamesFile{
-        margin-top: 15%;
+        margin-top: 17%;
     }
 
     #response .wrapSearch .wrapQueryGames .boxContentGames .crack{
@@ -815,8 +815,8 @@
         top: 6%;
     }
 
-    #response .wrapSearch{
-        height: 113%;
+    #response .wrapSearch{  /* tampilan searching */
+        height: 107%;
     }
 }
 
