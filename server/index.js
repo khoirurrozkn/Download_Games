@@ -21,6 +21,7 @@ app.use('/api/game', gameCategory)
 
 ////////////////////////////////// DEPLOY
 
+const __dirname = path.resolve()
 if(process.env.NODE_ENV==='production'){
     app.use(express.static(path.resolve(__dirname, '../client/build')));
 
