@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../component/Button'
 import Carousel from '../component/Carousel'
@@ -74,16 +74,17 @@ const Hero = () => {
     setIsLoading(true)
     if(category == ""){
       try {
-        const { data } = await axios.get('https://kukigames-api.vercel.app/api/game')
+        const { data } = await axios.get('http://127.0.0.1:5463/api/game')
 
         setIsLoading(false)
         setData(data)
+        console.log(data)
       } catch (error) {
         console.log(error.message)
       }
     }else{
       try {
-        const {data} = await axios.get(`https://kukigames-api.vercel.app/api/category/${category}`)
+        const {data} = await axios.get(`http://127.0.0.1:5463/api/category/${category}`)
   
         setIsLoading(false)
         setData(data.games)

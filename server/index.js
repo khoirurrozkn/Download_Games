@@ -5,7 +5,7 @@ import { notFound, errorHandler } from './middleware/errorHandler.js'
 import connection from './config/database.js'
 import categoryRoute from './routes/category.js'
 import gameCategory from './routes/games.js'
-// import path from 'path'
+import path from 'path'
 
 
 dotenv.config()
