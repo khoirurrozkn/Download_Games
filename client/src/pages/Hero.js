@@ -74,7 +74,7 @@ const Hero = () => {
     setIsLoading(true)
     if(category == ""){
       try {
-        const { data } = await axios.get('http://127.0.0.1:5463/api/game')
+        const { data } = await axios.get('https://rozgames-api/api/game')
 
         setIsLoading(false)
         setData(data)
@@ -84,7 +84,7 @@ const Hero = () => {
       }
     }else{
       try {
-        const {data} = await axios.get(`http://127.0.0.1:5463/api/category/${category}`)
+        const {data} = await axios.get(`https://rozgames-api/api/category/${category}`)
   
         setIsLoading(false)
         setData(data.games)
