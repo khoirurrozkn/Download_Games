@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/api/category', categoryRoute)
 app.use('/api/game', gameCategory)
+app.get('/', (req, res) => {res.send("api berjalan")})
 
 ////////////////////////////////// DEPLOY
 
