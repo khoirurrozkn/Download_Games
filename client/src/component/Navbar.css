@@ -1,0 +1,35 @@
+.fontNav{
+    height: 40px;
+    margin-right: 20px;
+}
+
+.fontNav:hover{
+    transform: scale(1.1);
+}
+
+.fontNav .bi{
+    font-size: 20px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .fontNav{
+        width: 50px;
+        height: 50px;
+        margin-right: 30px;
+    }
+
+    .fontNav .bi{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .fontNav{
+        height: 40px;
+        margin-right: 20px;
+    }
+
+    .fontNav .bi{
+        font-size: 20px;
+    }
+}
