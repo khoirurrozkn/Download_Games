@@ -1164,7 +1164,7 @@ const data = [
       "game_url": "https://www.freetogame.com/open/blankos",
       "game_name": "Blankos Block Party",
       "thumbnail": "https://www.freetogame.com/g/498/thumbnail.jpg",
-      "category": "MMO",
+      "category": "MMORPG",
       "createdAt": "2023-05-26T20:27:18.264Z",
       "updatedAt": "2023-05-26T20:27:18.264Z",
       "__v": 0
@@ -1449,7 +1449,7 @@ const data = [
       "game_url": "https://www.freetogame.com/open/Feral",
       "game_name": "Fer.al",
       "thumbnail": "https://www.freetogame.com/g/501/thumbnail.jpg",
-      "category": "MMO",
+      "category": "MMORPG",
       "createdAt": "2023-05-26T20:27:20.012Z",
       "updatedAt": "2023-05-26T20:27:20.012Z",
       "__v": 0
@@ -3639,7 +3639,7 @@ const data = [
       "game_url": "https://www.freetogame.com/open/cubic-castles",
       "game_name": "Cubic Castles",
       "thumbnail": "https://www.freetogame.com/g/196/thumbnail.jpg",
-      "category": "MMO",
+      "category": "MMORPG",
       "createdAt": "2023-05-26T20:27:33.777Z",
       "updatedAt": "2023-05-26T20:27:33.777Z",
       "__v": 0
@@ -3654,7 +3654,7 @@ const data = [
       "game_url": "https://www.freetogame.com/open/creativerse",
       "game_name": "Creativerse",
       "thumbnail": "https://www.freetogame.com/g/198/thumbnail.jpg",
-      "category": "MMO",
+      "category": "MMORPG",
       "createdAt": "2023-05-26T20:27:33.883Z",
       "updatedAt": "2023-05-26T20:27:33.883Z",
       "__v": 0
@@ -3714,7 +3714,7 @@ const data = [
       "game_url": "https://www.freetogame.com/open/robocraft",
       "game_name": "Robocraft",
       "thumbnail": "https://www.freetogame.com/g/203/thumbnail.jpg",
-      "category": "MMO",
+      "category": "MMORPG",
       "createdAt": "2023-05-26T20:27:34.381Z",
       "updatedAt": "2023-05-26T20:27:34.381Z",
       "__v": 0
@@ -5214,7 +5214,7 @@ const data = [
       "game_url": "https://www.freetogame.com/open/roblox",
       "game_name": "Roblox",
       "thumbnail": "https://www.freetogame.com/g/16/thumbnail.jpg",
-      "category": "MMO",
+      "category": "MMORPG",
       "createdAt": "2023-05-26T20:27:44.325Z",
       "updatedAt": "2023-05-26T20:27:44.325Z",
       "__v": 0

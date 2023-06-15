@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Button, Offcanvas, Container } from 'react-bootstrap'
 import './Navbar.css'
 
-const Navbar = (props) => {
+const Navbar  = (props) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
