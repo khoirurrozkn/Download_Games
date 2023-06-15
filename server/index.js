@@ -11,14 +11,14 @@ import gameCategory from './routes/games.js'
 dotenv.config()
 const app = express()
 connection()
-// {origin: 'https://zigames.vercel.app/'}
-app.use(cors())
+app.use(cors({origin: 'https://zigames.vercel.app/'}))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use('/api/category', categoryRoute)
 app.use('/api/game', gameCategory)
 app.get('/', (req, res) => {res.send("api berjalan")})
+app.get('*', (req, res) => {res.send("mau apa?")})
 
 ////////////////////////////////// DEPLOY
 
