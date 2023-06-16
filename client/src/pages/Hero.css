@@ -135,23 +135,34 @@
 
 .scroll{
     width: 100%;
-    height: 58%;
+    height: 56%;
     overflow-x: scroll;
-    white-space: nowrap; 
+    white-space: nowrap;
+    scrollbar-color: white transparent;
 }
 
 .wrapGames{
     width: auto;
-    height: 200px;
+    height: 220px;
+}
+
+.game0{
+    width: 320px;
+    height: 95%;
+    display: inline-block;
+    border-radius: 10px;
+    margin-right: 10px;
+    background-position: center;
+    background-size: cover;
 }
 
 .game{
     width: 320px;
-    height: 100%;
+    height: 95%;
     display: inline-block;
     border-radius: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     background-position: center;
     background-size: cover;
 }
@@ -166,6 +177,8 @@
     border: solid 0.5px rgba(240, 246, 252, 0.744);
     border-radius: 10px;
     cursor: pointer;
+    padding: 10px 10px;
+    margin-right: 40px;
 }
 
 .viewMore div:hover{
@@ -263,5 +276,19 @@
         border-radius: 5px;
         margin-left: 5px;
         margin-right: 5px;
+    }
+
+    .viewMore div{
+        border: solid 0.5px rgba(240, 246, 252, 0.744);
+        padding: 5px 10px;
+        margin-right: 20px;
+    }
+
+    .cuplikan{
+        padding: 10px 0px;
+    }
+
+    .hideCuplikan{
+        display: none;
     }
 }

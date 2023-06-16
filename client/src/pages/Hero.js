@@ -6,9 +6,24 @@ import './Hero.css'
 
 const Hero = () => {
   const [ shooter, setShooter ] = useState([])
+  const [ fighting, setFighting ] = useState([])
+  const [ mmorpg, setMmorpg ] = useState([])
+  const [ strategy, setStrategy ] = useState([])
+  const [ battleR, setBattleR ] = useState([])
+  const [ sports, setSports ] = useState([])
+  const [ cardGame, setCardGame ] = useState([])
+  const [ racing, setRacing ] = useState([])
 
   useEffect(() => {
     setShooter(games.filter(val => val.category === "Shooter").slice(0, 8))
+    setFighting(games.filter(val => val.category === "Fighting").slice(0, 8))
+    setMmorpg(games.filter(val => val.category === "MMORPG").slice(0, 8))
+    setStrategy(games.filter(val => val.category === "Strategy").slice(0, 8))
+    setBattleR(games.filter(val => val.category === "Battle Royale").slice(0, 8))
+    setSports(games.filter(val => val.category === "Sports").slice(0, 8))
+    setCardGame(games.filter(val => val.category === "Card Game").slice(0, 8))
+    setSports(games.filter(val => val.category === "Sports").slice(0, 8))
+    setRacing(games.filter(val => val.category === "Racing").slice(0, 8))
   },[])
 
   return (
@@ -70,70 +85,137 @@ const Hero = () => {
             <div>Racing</div>
           </div>
           <div className='cuplikan' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
-            <div className='viewMore d-flex justify-content-center'>
-              <div style={{padding: '10px 10px'}}>View More Shooter?</div>
+            <div className='viewMore d-flex justify-content-end'>
+              <div>View More Shooter?</div>
             </div>
             <div className='scroll'>
               <div className='wrapGames'>
                 {shooter && shooter.map((val, idx) => {
                   return(
-                    <div className='game' style={{
-                      backgroundImage: `url("${val.thumbnail}")`
+                    <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
                     }} key={idx}>{val.game_name}</div>
                   )
                 })}
-                {/* <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div> */}
               </div>
             </div>
           </div>
 
           <div className='cuplikan mt-2' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
-            <div className='viewMore d-flex justify-content-center'>
-              <div style={{padding: '10px 10px'}}>View More Shooter?</div>
+            <div className='viewMore d-flex justify-content-end'>
+              <div>View More Fighting?</div>
             </div>
             <div className='scroll'>
               <div className='wrapGames'>
-                {shooter && shooter.map((val, idx) => {
+                {fighting && fighting.map((val, idx) => {
                   return(
-                    <div className='game' style={{
-                      backgroundImage: `url("${val.thumbnail}")`
+                    <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
                     }} key={idx}>{val.game_name}</div>
                   )
                 })}
-                {/* <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div> */}
               </div>
             </div>
           </div>
 
           <div className='cuplikan mt-2' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
-            <div className='viewMore d-flex justify-content-center'>
-              <div style={{padding: '10px 10px'}}>View More Shooter?</div>
+            <div className='viewMore d-flex justify-content-end'>
+              <div>View More Mmorpg?</div>
             </div>
             <div className='scroll'>
               <div className='wrapGames'>
-                {shooter && shooter.map((val, idx) => {
+                {mmorpg && mmorpg.map((val, idx) => {
                   return(
-                    <div className='game' style={{
-                      backgroundImage: `url("${val.thumbnail}")`
+                    <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
                     }} key={idx}>{val.game_name}</div>
                   )
                 })}
-                {/* <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div>
-                <div className='game'></div> */}
+              </div>
+            </div>
+          </div>
+
+          <div className='hideCuplikan cuplikan mt-2' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
+            <div className='viewMore d-flex justify-content-end'>
+              <div>View More Strategy?</div>
+            </div>
+            <div className='scroll'>
+              <div className='wrapGames'>
+                {strategy && strategy.map((val, idx) => {
+                  return(
+                    <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
+                    }} key={idx}>{val.game_name}</div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className='hideCuplikan cuplikan mt-2' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
+            <div className='viewMore d-flex justify-content-end'>
+              <div>View More Battle Royale?</div>
+            </div>
+            <div className='scroll'>
+              <div className='wrapGames'>
+                {battleR && battleR.map((val, idx) => {
+                  return(
+                    <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
+                    }} key={idx}>{val.game_name}</div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className='hideCuplikan cuplikan mt-2' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
+            <div className='viewMore d-flex justify-content-end'>
+              <div>View More Sports?</div>
+            </div>
+            <div className='scroll'>
+              <div className='wrapGames'>
+                {sports && sports.map((val, idx) => {
+                  return(
+                    <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
+                    }} key={idx}>{val.game_name}</div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className='hideCuplikan cuplikan mt-2' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
+            <div className='viewMore d-flex justify-content-end'>
+              <div>View More Card game?</div>
+            </div>
+            <div className='scroll'>
+              <div className='wrapGames'>
+                {cardGame && cardGame.map((val, idx) => {
+                  return(
+                    <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
+                    }} key={idx}>{val.game_name}</div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className='hideCuplikan cuplikan mt-2' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
+            <div className='viewMore d-flex justify-content-end'>
+              <div>View More Racing?</div>
+            </div>
+            <div className='scroll'>
+              <div className='wrapGames'>
+                {racing && racing.map((val, idx) => {
+                  return(
+                    <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
+                    }} key={idx}>{val.game_name}</div>
+                  )
+                })}
               </div>
             </div>
           </div>
