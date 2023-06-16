@@ -5,14 +5,10 @@ import { Container } from 'react-bootstrap'
 import './Hero.css'
 
 const Hero = () => {
-  const [ data, setData ] = useState([])
+  const [ shooter, setShooter ] = useState([])
 
   useEffect(() => {
-    games.map((val) => {
-      if(val.crack === false){
-        setData(val)
-      }
-    })
+    setShooter(games.filter(val => val.category === "Shooter").slice(0, 8))
   },[])
 
   return (
@@ -34,13 +30,13 @@ const Hero = () => {
         </div>
 
         <div className='middle d-flex justify-content-center align-items-center'>
-          <marquee behavior="scroll" direction="left" className='d-block marq'>
+          {/* <marquee behavior="scroll" direction="left" className='d-block marq'>
             <span className='me-5'> Website terakhir di update pada 6 / 16 / 2023 </span>
             <span className='me-5'> Website terakhir di update pada 6 / 16 / 2023 </span>
             <span className='me-5'> Website terakhir di update pada 6 / 16 / 2023 </span>
             <span className='me-5'> Website terakhir di update pada 6 / 16 / 2023 </span>
             <span className='me-5'> Website terakhir di update pada 6 / 16 / 2023 </span>
-          </marquee>
+          </marquee> */}
         </div>
         <div className='right d-flex justify-content-center align-items-center'>
           <div className='complain'>
@@ -73,6 +69,75 @@ const Hero = () => {
             <div>Card game</div>
             <div>Racing</div>
           </div>
+          <div className='cuplikan' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
+            <div className='viewMore d-flex justify-content-center'>
+              <div style={{padding: '10px 10px'}}>View More Shooter?</div>
+            </div>
+            <div className='scroll'>
+              <div className='wrapGames'>
+                {shooter && shooter.map((val, idx) => {
+                  return(
+                    <div className='game' style={{
+                      backgroundImage: `url("${val.thumbnail}")`
+                    }} key={idx}>{val.game_name}</div>
+                  )
+                })}
+                {/* <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div> */}
+              </div>
+            </div>
+          </div>
+
+          <div className='cuplikan mt-2' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
+            <div className='viewMore d-flex justify-content-center'>
+              <div style={{padding: '10px 10px'}}>View More Shooter?</div>
+            </div>
+            <div className='scroll'>
+              <div className='wrapGames'>
+                {shooter && shooter.map((val, idx) => {
+                  return(
+                    <div className='game' style={{
+                      backgroundImage: `url("${val.thumbnail}")`
+                    }} key={idx}>{val.game_name}</div>
+                  )
+                })}
+                {/* <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div> */}
+              </div>
+            </div>
+          </div>
+
+          <div className='cuplikan mt-2' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
+            <div className='viewMore d-flex justify-content-center'>
+              <div style={{padding: '10px 10px'}}>View More Shooter?</div>
+            </div>
+            <div className='scroll'>
+              <div className='wrapGames'>
+                {shooter && shooter.map((val, idx) => {
+                  return(
+                    <div className='game' style={{
+                      backgroundImage: `url("${val.thumbnail}")`
+                    }} key={idx}>{val.game_name}</div>
+                  )
+                })}
+                {/* <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div>
+                <div className='game'></div> */}
+              </div>
+            </div>
+          </div>
+
       </div>
     </Container>
   )
