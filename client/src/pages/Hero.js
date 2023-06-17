@@ -17,6 +17,7 @@ const Hero = () => {
   const [ data, setData ] = useState([])
   const [ searching, setSearching ] = useState("")
   const [ resultSearching, setResultSearching ] = useState([])
+  const [ choice, setChoice ] = useState()
 
   useEffect(() => {
     setShooter(games.filter(val => val.category === "Shooter").slice(0, 8))
@@ -52,6 +53,7 @@ const Hero = () => {
 
   return (
     <>
+
     {isCategory? 
     <>
       <Container fluid className='p-0' style={{
@@ -73,7 +75,15 @@ const Hero = () => {
       backgroundColor: 'rgb(13,17,22)'
     }}>
       {/* <Navbar title='Pilihan' body='babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo' /> */}
+      {choice && 
+      <>
+        <div className='backChoice d-flex justify-content-center align-items-center' onClick={() => setChoice(false)}>
+          <div className='boxChoiceGame'>
 
+          </div>
+        </div>
+      </>
+      }
       <div className='w-100 d-flex justify-content-center align-items-bottom btrans' style={{backgroundColor: 'rgb(22,27,34)'}}>
         <div className='left d-flex align-items-center justify-content-center' style={{height: 'auto'}}>
           <div className='logoHero' style={{
@@ -124,7 +134,7 @@ const Hero = () => {
                   return(
                     <div className='boxResult' key={idx} style={{
                       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
-                    }}>{val.game_name}</div>
+                    }} onClick={() => setChoice(val)}></div>
                   )
                 })}
               </div>
@@ -155,7 +165,7 @@ const Hero = () => {
                   return(
                     <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
                       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
-                    }} key={idx}>{val.game_name}</div>
+                    }} key={idx} onClick={() => setChoice(val)}></div>
                   )
                 })}
               </div>
@@ -172,7 +182,7 @@ const Hero = () => {
                   return(
                     <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
                       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
-                    }} key={idx}>{val.game_name}</div>
+                    }} key={idx} onClick={() => setChoice(val)}></div>
                   )
                 })}
               </div>
@@ -189,7 +199,7 @@ const Hero = () => {
                   return(
                     <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
                       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
-                    }} key={idx}>{val.game_name}</div>
+                    }} key={idx} onClick={() => setChoice(val)}></div>
                   )
                 })}
               </div>
@@ -206,7 +216,7 @@ const Hero = () => {
                   return(
                     <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
                       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
-                    }} key={idx}>{val.game_name}</div>
+                    }} key={idx} onClick={() => setChoice(val)}></div>
                   )
                 })}
               </div>
@@ -223,7 +233,7 @@ const Hero = () => {
                   return(
                     <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
                       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
-                    }} key={idx}>{val.game_name}</div>
+                    }} key={idx} onClick={() => setChoice(val)}></div>
                   )
                 })}
               </div>
@@ -240,7 +250,7 @@ const Hero = () => {
                   return(
                     <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
                       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
-                    }} key={idx}>{val.game_name}</div>
+                    }} key={idx} onClick={() => setChoice(val)}></div>
                   )
                 })}
               </div>
@@ -257,7 +267,7 @@ const Hero = () => {
                   return(
                     <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
                       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
-                    }} key={idx}>{val.game_name}</div>
+                    }} key={idx} onClick={() => setChoice(val)}></div>
                   )
                 })}
               </div>
@@ -274,7 +284,7 @@ const Hero = () => {
                   return(
                     <div className={ idx === 0 ? `game${idx}` : 'game'} style={{
                       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`
-                    }} key={idx}>{val.game_name}</div>
+                    }} key={idx} onClick={() => setChoice(val)}></div>
                   )
                 })}
               </div>

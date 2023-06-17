@@ -195,7 +195,7 @@
 }
 
 .resultSearching{
-    width: 60%;
+    width: 90%;
     height: auto;
     border: solid 0.2px rgba(255, 255, 255, 0.749);
     padding: 10px 10px;
@@ -204,7 +204,7 @@
 }
 
 .boxResult{
-    width: 40%;
+    width: 30%;
     height: 170px;
     border-radius: 10px;
     margin-left: 5px;
@@ -213,6 +213,21 @@
     margin-bottom: 5px;
     background-position: center;
     background-size: cover;
+}
+
+.backChoice{
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.496);
+}
+
+.boxChoiceGame{
+    width: 80%;
+    height: 30%;
+    background-color: rgb(22,27,34);
+    border-radius: 10px;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -325,5 +340,13 @@
 
     .hideCuplikan{
         display: none;
+    }
+
+    .resultSearching{
+        width: 90%;
+    }
+    
+    .boxResult{
+        height: 100px;
     }
 }
