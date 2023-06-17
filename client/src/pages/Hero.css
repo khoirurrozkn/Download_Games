@@ -17,11 +17,11 @@
 }
 
 .middle{
-    width: 50%;
+    width: 40%;
 }
 
 .right{
-    width: 25%;
+    width: 35%;
 }
 
 .right .bonus{
@@ -213,6 +213,7 @@
     margin-bottom: 5px;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 }
 
 .backChoice{
@@ -225,9 +226,59 @@
 
 .boxChoiceGame{
     width: 80%;
-    height: 30%;
+    height: auto;
     background-color: rgb(22,27,34);
     border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+.exitChoice{
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.733);
+}
+
+.imageChoice{
+    width: 40%;
+    height: 230px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.leftDesc{
+    text-align: start;
+    margin-right: 30px;
+    margin-left: 5%;
+}
+
+.wrapLink{
+    margin-top: 30px;
+}
+
+.link{
+    padding: 5px 20px;
+    border: solid 0.2px white;
+    text-decoration: none;
+    color: rgba(255, 217, 0, 0.79);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.link:hover{
+    color: gold;
+    transform: scale(1.1);
+}
+
+.khususDesc{
+    width: 300px;
+    height: auto;
+}
+
+.footer{
+    width: 100%;
+    height: 80px;
+    border-top: solid 0.2px rgba(255, 255, 255, 0.567);
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -317,12 +368,14 @@
 
     .game0{
         width: 150px;
+        height: 90%;
         border-radius: 5px;
         margin-right: 5px;
     }
     
     .game{
         width: 150px;
+        height: 90%;
         border-radius: 5px;
         margin-left: 5px;
         margin-right: 5px;
@@ -348,5 +401,44 @@
     
     .boxResult{
         height: 100px;
+    }
+    
+    .boxChoiceGame{
+        width: 90%;
+        height: auto;
+        background-color: rgb(22,27,34);
+        border-radius: 10px;
+        padding-bottom: 30px;
+        font-size: 13px;
+    }
+    
+    .exitChoice{
+        font-size: 40px;
+        color: rgba(255, 255, 255, 0.733);
+    }
+    
+    .imageChoice{
+        width: 90%;
+        height: 180px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .leftDesc{
+        text-align: start;
+        margin-right: 0px;
+        margin-left: 0%;
+        width: 30%;
+    }
+
+    .rightDesc{
+        width: 60%;
+    }
+
+    .khususDesc{
+        width: 100%;
+        height: auto;
     }
 }

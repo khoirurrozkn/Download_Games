@@ -3,6 +3,7 @@ import games from './../game/Game'
 import { Container } from 'react-bootstrap'
 // import Navbar from './../component/Navbar'
 import './Hero.css'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   const [ shooter, setShooter ] = useState([])
@@ -77,9 +78,33 @@ const Hero = () => {
       {/* <Navbar title='Pilihan' body='babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo babayo' /> */}
       {choice && 
       <>
-        <div className='backChoice d-flex justify-content-center align-items-center' onClick={() => setChoice(false)}>
+        <div className='backChoice d-flex justify-content-center align-items-center'>
           <div className='boxChoiceGame'>
-
+            <div className='exitChoice'><i className="bi bi-x" style={{cursor: 'pointer'}} onClick={() => setChoice(false)}></i></div>\
+            <div className='w-100 d-flex justify-content-center' style={{height: 'auto'}}>
+              <div className='imageChoice' style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${choice.thumbnail}")`}}></div>
+            </div>
+            <div className='w-100 d-flex justify-content-center text-light' style={{height: 'auto', flexWrap: 'wrap'}}>
+              <div className='leftDesc'>
+                <div>Name</div>
+                <div className='mt-2'>Developer</div>
+                <div className='mt-2'>Publisher</div>
+                <div className='mt-2'>Category</div>
+                <div className='mt-2'>Release</div>
+                <div className='mt-2'>Description</div>
+              </div>
+              <div className='rightDesc'>
+                <div>: {choice.game_name}</div>
+                <div className='mt-2'>: {choice.developer}</div>
+                <div className='mt-2'>: {choice.publisher}</div>
+                <div className='mt-2'>: {choice.category}</div>
+                <div className='mt-2'>: {choice.release}</div>
+                <div className='khususDesc mt-2'>: {choice.description}</div>
+              </div>
+              <div className='text-center wrapLink' style={{width: '100%'}}>
+                <Link className='link' to={choice.game_url}>Download?</Link>
+              </div>
+            </div>
           </div>
         </div>
       </>
@@ -189,7 +214,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className='cuplikan mt-2' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
+          <div className='hideCuplikan cuplikan mt-2' style={{color: 'rgba(240, 246, 252, 0.744)'}}>
             <div className='viewMore d-flex justify-content-end'>
               <div onClick={() => changeCategory("MMORPG")}>View More Mmorpg?</div>
             </div>
@@ -291,6 +316,9 @@ const Hero = () => {
             </div>
           </div>
 
+      </div>
+      <div className='footer d-flex justify-content-center align-items-center mt-3'>
+        <div style={{color: 'rgba(255, 255, 255, 0.567)'}}>Terimakasih sudah berkunjung</div>
       </div>
     </Container>
     </>
