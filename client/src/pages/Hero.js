@@ -19,6 +19,7 @@ const Hero = () => {
   const [ searching, setSearching ] = useState("")
   const [ resultSearching, setResultSearching ] = useState([])
   const [ choice, setChoice ] = useState()
+  const [ choosen, setChoosen ] = useState()
 
   useEffect(() => {
     setShooter(games.filter(val => val.category === "Shooter").slice(0, 8))
@@ -34,8 +35,10 @@ const Hero = () => {
 
   const changeCategory = (req) => {
     if(req === ""){
+      setChoosen(req)
       setData(games)
     }else{
+      setChoosen(req)
       setData(games.filter(val => val.category === req && val.crack === false))
     }
     
@@ -58,15 +61,69 @@ const Hero = () => {
     {isCategory? 
     <>
       <Container fluid className='p-0' style={{
-      height: 'auto',
+      height: '100vh',
       backgroundColor: 'rgb(13,17,22)'
     }}>
+    {choice && 
+      <>
+        <div className='backChoice d-flex justify-content-center align-items-center'>
+          <div className='boxChoiceGame'>
+            <div className='exitChoice'><i className="bi bi-x" style={{cursor: 'pointer'}} onClick={() => setChoice(false)}></i></div>
+            <div className='w-100 d-flex justify-content-center' style={{height: 'auto'}}>
+              <div className='imageChoice' style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${choice.thumbnail}")`}}></div>
+            </div>
+            <div className='w-100 d-flex justify-content-center text-light' style={{height: 'auto', flexWrap: 'wrap'}}>
+              <div className='leftDesc'>
+                <div>Name</div>
+                <div className='mt-2'>Developer</div>
+                <div className='mt-2'>Publisher</div>
+                <div className='mt-2'>Category</div>
+                <div className='mt-2'>Release</div>
+                <div className='mt-2'>Description</div>
+              </div>
+              <div className='rightDesc'>
+                <div>: {choice.game_name}</div>
+                <div className='mt-2'>: {choice.developer}</div>
+                <div className='mt-2'>: {choice.publisher}</div>
+                <div className='mt-2'>: {choice.category}</div>
+                <div className='mt-2'>: {choice.release}</div>
+                <div className='khususDesc mt-2'>: {choice.description}</div>
+              </div>
+              <div className='text-center wrapLink' style={{width: '100%'}}>
+                <Link className='link' to={choice.game_url}>Download?</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    }
+    <div className='exitChoice'><i className="bi bi-x" style={{cursor: 'pointer'}} onClick={() => setIsCategory(false)}></i></div>
+    <div className='logoHero text-center' style={{
+            fontFamily: "'Nanum Myeongjo', serif", 
+            letterSpacing: '2px',
+            color: 'rgba(255, 255, 255, 0.918)'
+          }}>KukiGames</div>
+      <div className='choiceHero isCate2 d-flex justify-content-center align-items-center'>
+        <div onClick={() => changeCategory("")} className={choosen === ""? 'cateActive' : null}>All games</div>
+        <div onClick={() => changeCategory("Shooter")} className={choosen === "Shooter"? 'cateActive' : null}>Shooter</div>
+        <div onClick={() => changeCategory("Fighting")} className={choosen === "Fighting"? 'cateActive' : null}>Fighting</div>
+        <div onClick={() => changeCategory("MMORPG")} className={choosen === "MMORPG"? 'cateActive' : null}>Mmorpg</div>
+        <div onClick={() => changeCategory("Strategy")} className={choosen === "Strategy"? 'cateActive' : null}>Strategy</div>
+        <div onClick={() => changeCategory("Battle Royale")} className={choosen === "Battle Royale"? 'cateActive' : null}>Battle royale</div>
+        <div onClick={() => changeCategory("Sports")} className={choosen === "Sports"? 'cateActive' : null}>Sports</div>
+        <div onClick={() => changeCategory("Card Game")} className={choosen === "Card Game"? 'cateActive' : null}>Card game</div>
+        <div onClick={() => changeCategory("Racing")} className={choosen === "Racing"? 'cateActive' : null}>Racing</div>
+      </div>
 
-        {data.map((val, idx) => {
-            return(
-              <div key={idx}>{val.game_name}</div>
-            )  
-        })}
+      <div className='wrapIsCate d-flex justify-content-center align-items-center'>
+        <div className='boxIsCate d-flex'>
+          {data.map((val, idx) => {
+              return(
+                <div onClick={() => setChoice(val)} className='isiGame' style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${val.thumbnail}")`}} key={idx}></div>
+              )
+          })}
+        </div>
+      </div>
       </Container>
     </> 
     : 
@@ -80,7 +137,7 @@ const Hero = () => {
       <>
         <div className='backChoice d-flex justify-content-center align-items-center'>
           <div className='boxChoiceGame'>
-            <div className='exitChoice'><i className="bi bi-x" style={{cursor: 'pointer'}} onClick={() => setChoice(false)}></i></div>\
+            <div className='exitChoice'><i className="bi bi-x" style={{cursor: 'pointer'}} onClick={() => setChoice(false)}></i></div>
             <div className='w-100 d-flex justify-content-center' style={{height: 'auto'}}>
               <div className='imageChoice' style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.111)), url("${choice.thumbnail}")`}}></div>
             </div>

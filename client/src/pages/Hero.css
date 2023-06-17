@@ -106,6 +106,13 @@
     transform: scale(1.1);
 }
 
+.cateActive{
+    background-color: rgb(22,27,34);
+    transform: scale(1.1);
+    color: white !important;
+    border: solid 1.5px white !important;
+}
+
 .wrapSearchHero{
     width: 100%;
     height: 45px;
@@ -218,7 +225,7 @@
 
 .backChoice{
     position: fixed;
-    z-index: 10;
+    z-index: 99;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.496);
@@ -279,6 +286,36 @@
     width: 100%;
     height: 80px;
     border-top: solid 0.2px rgba(255, 255, 255, 0.567);
+}
+
+.isCate2{
+    padding-top: 10px;
+}
+
+.wrapIsCate{
+    width: 100%;
+    height: auto;
+}
+
+.boxIsCate{
+    width: 95%;
+    overflow-y: scroll;
+    height: 70vh;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    border: solid 0.3px rgba(255, 255, 255, 0.308);
+}
+
+.isiGame{
+    width: 32.3%;
+    height: 220px;
+    margin-top: 20px;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
