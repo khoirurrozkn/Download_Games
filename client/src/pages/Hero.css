@@ -405,6 +405,10 @@
         width: 49%;
         height: 220px;
     }
+    .imageChoice{
+        width: 80%;
+        height: 290px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
