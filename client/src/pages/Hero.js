@@ -4,6 +4,9 @@ import { Container } from 'react-bootstrap'
 // import Navbar from './../component/Navbar'
 import './Hero.css'
 import { Link } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { toast } from 'react-toastify'
 
 const Hero = () => {
   const [ shooter, setShooter ] = useState([])
@@ -20,6 +23,8 @@ const Hero = () => {
   const [ resultSearching, setResultSearching ] = useState([])
   const [ choice, setChoice ] = useState()
   const [ choosen, setChoosen ] = useState()
+  const [ crack, setCrack ] = useState(false)
+  const [ password, setPassword ] = useState("")
 
   useEffect(() => {
     setShooter(games.filter(val => val.category === "Shooter").slice(0, 8))
@@ -35,15 +40,27 @@ const Hero = () => {
 
   const changeCategory = (req) => {
     if(req === ""){
+      setCrack(false)
       setChoosen(req)
       setData(games)
     }else{
+      setCrack(false)
       setChoosen(req)
       setData(games.filter(val => val.category === req && val.crack === false))
     }
     
     setIsCategory(true)
   }
+
+  useEffect(() => {
+    if(password === "kamuNanya?"){
+      setData(games.filter(val => val.crack === true))
+      setIsCategory(true)
+      setChoosen("crack")
+      setPassword("")
+      setCrack("")
+    }
+  },[password])
 
   useEffect(() => {
     if(searching === ""){
@@ -57,7 +74,17 @@ const Hero = () => {
 
   return (
     <>
-
+    {crack && 
+    <>
+      <div className='boxCrack d-flex justify-content-center align-items-center'>
+        <div className='wrapInputBonus d-flex justify-content-center'>
+        <div className='exitChoice exitBonus'><i className="bi bi-x" style={{cursor: 'pointer'}} onClick={() => setCrack(false)}></i></div>
+          <input type='text' placeholder='Masukan Password' autoFocus onChange={(e) => setPassword(e.target.value)}></input>
+        </div>
+      </div>
+    </>
+    }
+    <ToastContainer/>
     {isCategory? 
     <>
       <Container fluid className='p-0' style={{
@@ -103,6 +130,9 @@ const Hero = () => {
             letterSpacing: '2px',
             color: 'rgba(255, 255, 255, 0.918)'
           }}>KukiGames</div>
+
+    {crack === false ?
+    <>
       <div className='choiceHero isCate2 d-flex justify-content-center align-items-center'>
         <div onClick={() => changeCategory("")} className={choosen === ""? 'cateActive' : null}>All games</div>
         <div onClick={() => changeCategory("Shooter")} className={choosen === "Shooter"? 'cateActive' : null}>Shooter</div>
@@ -114,6 +144,12 @@ const Hero = () => {
         <div onClick={() => changeCategory("Card Game")} className={choosen === "Card Game"? 'cateActive' : null}>Card game</div>
         <div onClick={() => changeCategory("Racing")} className={choosen === "Racing"? 'cateActive' : null}>Racing</div>
       </div>
+    </>
+    :
+    <>
+      <div className='text-center captCrack'>crack extensi .Rar install nya tinggal di ekstrak aja ga ribet</div>
+    </>
+    }
 
       <div className='wrapIsCate d-flex justify-content-center align-items-center'>
         <div className='boxIsCate d-flex'>
@@ -187,13 +223,13 @@ const Hero = () => {
           </marquee> */}
         </div>
         <div className='right d-flex justify-content-center align-items-center'>
-          <div className='complain'>
+          <div className='complain' onClick={() => toast.info("Website sudah tidak di update", {position: toast.POSITION.TOP_CENTER})}>
             Complain?
           </div>
-          <div className='request'>
+          <div className='request' onClick={() => toast.info("Website sudah tidak di update", {position: toast.POSITION.TOP_CENTER})}>
             Request?
           </div>
-          <div className='bonus'>
+          <div className='bonus' onClick={() => setCrack(true)}>
             Bonus
           </div>
         </div>

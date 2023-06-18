@@ -150,7 +150,7 @@
 
 .wrapGames{
     width: auto;
-    height: 220px;
+    height: 190px;
 }
 
 .game0{
@@ -318,8 +318,93 @@
     cursor: pointer;
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+.boxCrack{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.514);
+    z-index: 99;
+}
 
+.boxCrack input{
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px 10px;
+    background-color: rgba(255, 255, 255, 0.112);
+    border: none;
+    color: white;
+}
+
+.boxCrack input::placeholder {
+    color: white;
+}
+
+.wrapInputBonus{
+    padding: 30px 30px; 
+    padding-bottom: 80px;
+    width: 50%; 
+    background-color: black; 
+    height: auto;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.exitBonus{
+    margin-top: 0px;
+    width: 100%;
+}
+
+.captCrack{
+    color:rgba(255, 255, 255, 0.571);
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .choiceHero div{
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .game0{
+        width: 290px;
+        height: 150px;
+    }
+    
+    .game{
+        width: 290px;
+        height: 150px;
+    }
+
+    .cuplikan{
+        padding: 10px 0px;
+        width: 100%;
+    }
+
+    .wrapGames{
+        width: auto;
+        height: 180px;
+    }
+
+    .left{
+        width: 25%;
+    }
+    
+    .middle{
+        width: 30%;
+    }
+    
+    .right{
+        width: 45%;
+    }
+
+    .isiGame{
+        width: 49%;
+        height: 220px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -485,6 +570,7 @@
 
     .lgHe{
         padding-top: 20px;
+        font-size: 30px !important;
     }
 
     .isCate2{
@@ -501,5 +587,13 @@
         height: 100px;
         margin-right: 2.5%;
         margin-left: 2.5%;
+    }
+
+    .wrapInputBonus{
+        width: 90%;
+    }
+
+    .captCrack{
+        font-size: 15px;
     }
 }
