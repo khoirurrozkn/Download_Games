@@ -53,7 +53,7 @@ const Hero = () => {
   }
 
   useEffect(() => {
-    if(password === "kamuNanya?"){
+    if(password === "kamu nanya"){
       setData(games.filter(val => val.crack === true))
       setIsCategory(true)
       setChoosen("crack")
