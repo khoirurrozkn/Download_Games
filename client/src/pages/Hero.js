@@ -97,8 +97,8 @@ const Hero = () => {
         </div>
       </>
     }
-    <div className='exitChoice'><i className="bi bi-x" style={{cursor: 'pointer'}} onClick={() => setIsCategory(false)}></i></div>
-    <div className='logoHero text-center' style={{
+    <div className='exitChoice exCh'><i className="bi bi-x" style={{cursor: 'pointer'}} onClick={() => setIsCategory(false)}></i></div>
+    <div className='logoHero lgHe text-center' style={{
             fontFamily: "'Nanum Myeongjo', serif", 
             letterSpacing: '2px',
             color: 'rgba(255, 255, 255, 0.918)'

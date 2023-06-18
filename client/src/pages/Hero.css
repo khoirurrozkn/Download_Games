@@ -478,4 +478,28 @@
         width: 100%;
         height: auto;
     }
+
+    .exCh{
+        position: absolute;
+    }
+
+    .lgHe{
+        padding-top: 20px;
+    }
+
+    .isCate2{
+        padding-top: 10px;
+        padding-bottom: 10px !important;
+    }
+    
+    .boxIsCate{
+        height: 66vh;
+    }
+    
+    .isiGame{
+        width: 45%;
+        height: 100px;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
+    }
 }
